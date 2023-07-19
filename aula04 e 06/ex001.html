@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro programa</title>
+    <link rel="stylesheet" href="indexHF.css">
+    <style> /* Comemtario para o style CSS , tem apenas esse */
+        body {
+            background-color: gray;
+            background-image: url(https://i1.pickpik.com/photos/988/757/277/texture-wall-gray-wall-texture-preview.jpg);
+            color: black;
+            font: normal 15pt Arial;
+        }
+        a, p, code {
+            font-size: .8em;
+            color: black;
+        }
+    </style>
+</head>
+<body> <!-- Comentario em HTML -->
+    <header>
+        <a href="../index.html"> 
+        &lt; IndexJS &gt;
+        </a>
+        <p>ex001</p>
+    </header>
+    <h1>Hello, World!</h1>
+    <p>Aula04 </p>
+    <p>O curso nao ira usar ponto e virgula, porem e opcional.</p>
+    <hr>
+    <h2>Bibliografia Recomendada:</h2>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials" target="_blank">
+        https://developer.mozilla.org/en-US/docs/Web/Tutorials</a>
+
+    <h2>Links dos Videos:</h2>
+    <a href="https://youtu.be/Vbabsye7mWo" target="_blank">
+        9- Variáveis e Tipos Primitivos - Curso JavaScript #05</a><br>
+    <a href="https://youtu.be/Vbabsye7mWo" target="_blank">
+        8- Módulo B - Comandos Básicos do JavaScript</a><br>
+    <a href="https://youtu.be/OmmJBfcMJA8" target="_blank">
+        7- Criando o seu primeiro script - Curso JavaScript #04</a><br>
+    <a href="https://youtu.be/FdePtO5JSd0" target="_blank">
+        6- Dando os primeiros passos - Curso JavaScript #03</a><br>
+    
+    <h3>Playlists:</h3>
+    <a href="https://www.youtube.com/watch?v=1-w1RfGIov4&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&pp=iAQB" target="_blank">
+        Curso de JavaScript - Playlist</a><br>
+    <a href="https://www.youtube.com/@CursoemVideo/playlists" target="_blank">
+        Curso em Video - Playlists</a><br>
+
+    <h3>Extensions:</h3>
+    <a href="https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm?hl=en" target="_blank">
+        Web Developer Extension</a><br>
+    <a href="https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh?hl=en" target="_blank">
+        Window Resizer</a><br>
+
+    <code><pre>
+------------------------------------------------
+
+Install NodeJS and NPM on Ubuntu:
+    https://www.hostinger.com/tutorials/how-to-install-node-ubuntu 
+    $ sudo apt install nodejs
+    $ sudo apt install npm
+    $ nodejs -v
+    $ npm -v
+    $ nodejs
+
+------------------------------------------------
+
+O que o JavaScript é capaz de fazer? - Curso JavaScript #01
+    https://youtu.be/Ptbk2af68e8
+    Browser DevTools, desativar JS
+    Console:
+    > alert('Hello, World!')
+    > document.body.style.background = 'black'
+
+    Mudando a cor da logo do google:
+    > document.querySelector('img.lnXdpd').style.filter = 'grayscale(100%)'
+    > document.querySelector('img.lnXdpd').style.visibility = 'hidden'
+
+    Mudando titulo de pagina de noticias:
+    > document.querySelector('h3#lk65w8qo.title__element.headlineMain__title').innerText = 'Felipe'
+
+------------------------------------------------
+
+&lt;script&gt;
+
+    //window.alert('Primeira mensagem em JS')
+
+    // Funciona sem o trecho window.
+    alert('Primeira mensagem em JS')
+
+    //window.confirm('Gostou de JS?')
+    confirm('Gostou de JS?')
+
+    //window.prompt('Qual seu nome?')
+    prompt('Qual seu nome?')
+
+&lt;/script&gt;
+
+------------------------------------------------
+            Comentarios:
+
+/* Comemtario para o style CSS , tem apenas esse */
+
+&lt;!-- Comentario em HTML --&gt;
+
+// Comentario em linha para SCRIPT
+
+/*
+    E Comentario em bloco para SCRIPT
+*/
+
+------------------------------------------------
+
+m@r:~$ nodejs
+Welcome to Node.js v12.22.9.
+Type ".help" for more information.
+> 'oi'
+'oi'
+> 3 + 2
+5
+> var nome = "Felipe"
+undefined
+> nome
+'Felipe'
+> 'nome'
+'nome'
+> nome = 'Marcelo'
+'Marcelo'
+> nome
+'Marcelo'
+> .exit
+
+------------------------------------------------
+
+m@r:~$ node
+Welcome to Node.js v12.22.9.
+Type ".help" for more information.
+> var salario = 1,550.35
+var salario = 1,550.35
+                ^^^^^^
+
+Uncaught SyntaxError: Unexpected number
+> var salario = 1550.35
+undefined
+> var sexo = "M"
+undefined
+> var idade = 33
+undefined
+> idade
+33
+> salario
+1550.35
+> sexo
+'M'
+> 
+(To exit, press ^C again or ^D or type .exit)
+> 
+m@r:~$ 
+
+------------------------------------------------
+
+m@r:~$ node
+Welcome to Node.js v12.22.9.
+Type ".help" for more information.
+> var n1 = 8
+undefined
+> var n2 = 5
+undefined
+> n1 + n2
+13
+> var shortcutLimpar = 'ctrl+L'
+
+------------------------------------------------
+
+Regras para Identificadores de variaveis:
+
+    Podem comecar com letra, $ ou _ 
+    Nao podem comecar com numeros
+    Pode usar letras e numeros, acentos e simbolos
+    Nao pode ter espacos, e ser palavras reservadas
+
+------------------------------------------------
+
+Data Types:         (typeof)Command
+        number
+            Infinity
+            NaN
+        string
+        boolean
+        null
+        undefined
+        object 
+            Array
+        function
+
+------------------------------------------------
+
+m@r:~$ node
+Welcome to Node.js v12.22.9.
+Type ".help" for more information.
+> var n = 200
+undefined
+> typeof n
+'number'
+> n = "Google"
+'Google'
+> typeof n
+'string'
+> typeof 6
+'number'
+> typeof 6.5
+'number'
+> typeof "6.5"
+'string'
+> typeof []
+'object'
+> typeof {}
+'object'
+> typeof function(){}
+'function'
+> typeof undefined
+'undefined'
+> typeof NaN
+'number'
+> typeof Infinity
+'number'
+> typeof null
+'object'
+> 
+(To exit, press ^C again or ^D or type .exit)
+> 
+m@r:~$ 
+
+------------------------------------------------
+    </pre></code>
+    <footer>
+        <a href="../index.html">
+           &lt; IndexJS &gt;
+        </a>
+    </footer>
+    <hr>
+    <script> // Comentario em linha para SCRIPT
+        /*
+            E Comentario em bloco para SCRIPT
+        */
+
+        //window.alert('Primeira mensagem em JS')
+
+        alert('Primeira mensagem em JS') // Funciona sem o trecho window.
+
+        //window.confirm('Gostou de JS?')
+        confirm('Gostou de JS?')
+
+        //window.prompt('Qual seu nome?')
+        prompt('Qual seu nome?')
+
+    </script>
+</body>
+</html>

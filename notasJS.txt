@@ -1,0 +1,159 @@
+
+------------------------------------------------
+------------------------------------------------
+------------------------------------------------
+------------------------------------------------
+------------------------------------------------
+------------------------------------------------
+------------------------------------------------
+------------------------------------------------
+------------------------------------------------
+------------------------------------------------
+------------------------------------------------
+------------------------------------------------
+------------------------------------------------
+                    Template1:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part3 - Video10 Aula06 ex004</title>
+    <link rel="stylesheet" href="indexHF.css">
+    <style> 
+        body {
+            background-color: gray;
+            background-image: url(https://i1.pickpik.com/photos/988/757/277/texture-wall-gray-wall-texture-preview.jpg);
+            color: black;
+            font: normal 13pt Arial;
+        }
+        a, p, code {
+            font-size: .8em;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html"> 
+        &lt; IndexJS &gt;
+        </a>
+        <p>ex004</p>
+    </header>
+    <h1>Tratamento de Dados Part3</h1>
+    <p>Video10 Aula06</p>
+    <hr>
+    <h2>Bibliografia Recomendada:</h2>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials" target="_blank">
+        https://developer.mozilla.org/en-US/docs/Web/Tutorials</a>
+
+    
+    <h2>Links dos Videos:</h2>
+    <a href="https://youtu.be/OJgu_KCCUSY" target="_blank">
+        10- Tratamento de dados - Curso JavaScript #06</a><br>
+
+
+    <h3>Playlists:</h3>
+    <a href="https://www.youtube.com/watch?v=1-w1RfGIov4&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&pp=iAQB" target="_blank">
+        Curso de JavaScript - Playlist</a><br>
+    <a href="https://www.youtube.com/@CursoemVideo/playlists" target="_blank">
+        Curso em Video - Playlists</a><br>
+
+    <code><pre>
+------------------------------------------------
+                Template:
+&lt;script&gt;
+
+&lt;/script&gt;
+
+------------------------------------------------
+
+
+------------------------------------------------
+
+    </pre></code>
+    <footer>
+        <a href="../index.html">
+           &lt; IndexJS &gt;
+        </a>
+    </footer>
+    <hr>
+    <script> 
+
+    </script>
+</body>
+</html>
+------------------------------------------------
+<a href="https://www.youtube.com/@CursoemVideo/playlists" target="_blank">
+    Curso em Video - Playlists</a><br>
+<a href="https://www.youtube.com/watch?v=1-w1RfGIov4&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&pp=iAQB" target="_blank">
+    Curso de JavaScript - Playlist</a><br>
+
+
+
+
+
+
+
+30- 
+29- 
+28- 
+27- 
+26- 
+25- 
+24- 
+23- 
+22- 
+21- 
+20- 
+19- 
+18- 
+17- 
+16- 
+15- 
+14- 
+13- 
+12- 
+11- 
+<a href="https://youtu.be/OJgu_KCCUSY" target="_blank">
+    10- Tratamento de dados - Curso JavaScript #06</a>
+<a href="https://youtu.be/Vbabsye7mWo" target="_blank">
+    9- Variáveis e Tipos Primitivos - Curso JavaScript #05</a>
+<a href="https://youtu.be/Vbabsye7mWo" target="_blank>
+    8- Módulo B - Comandos Básicos do JavaScript</a>
+<a href="https://youtu.be/OmmJBfcMJA8" target="_blank">
+    7- Criando o seu primeiro script - Curso JavaScript #04</a>
+<a href="https://youtu.be/FdePtO5JSd0" target="_blank">
+    6- Dando os primeiros passos - Curso JavaScript #03</a> 
+
+------------
+
+Bibliografia Recomendada:
+<a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials" target="_blank">
+https://developer.mozilla.org/en-US/docs/Web/Tutorials</a>
+
+Install NodeJS and NPM on Ubuntu:
+https://www.hostinger.com/tutorials/how-to-install-node-ubuntu 
+$ sudo apt install nodejs
+$ sudo apt install npm
+$ nodejs -v
+$ npm -v
+$ nodejs
+------------------------------------------------
+
+O que o JavaScript é capaz de fazer? - Curso JavaScript #01
+    https://youtu.be/Ptbk2af68e8
+    Browser DevTools, desativar JS
+    Console:
+    > alert('Hello, World!')
+    > document.body.style.background = 'black'
+
+    Mudando a cor da logo do google:
+    > document.querySelector('img.lnXdpd').style.filter = 'grayscale(100%)'
+    > document.querySelector('img.lnXdpd').style.visibility = 'hidden'
+
+    Mudando titulo de pagina de noticias:
+    > document.querySelector('h3#lk65w8qo.title__element.headlineMain__title').innerText = 'Felipe'
+
+------------------------------------------------

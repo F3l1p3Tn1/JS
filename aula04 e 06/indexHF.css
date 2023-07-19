@@ -1,0 +1,38 @@
+@charset "UTF=8";
+
+header a {
+    padding: 10px;
+    border: 1px solid black;
+    padding: 5px; 
+    margin: 5px;
+    border-radius: 5px;
+    display: inline;
+    font-weight: bold;
+}
+header p {
+    display: inline;
+    position: absolute;
+    right: 1%;
+    top: 0%;
+    border: 1px solid black;
+    padding: 5px; 
+    margin: 5px;
+    border-radius: 5px;
+    display: inline;
+    font-weight: bold;
+}
+footer {
+    text-align: center; 
+    margin-bottom: 20px;
+}
+footer a {
+    padding: 10px;
+    border: 1px solid black;
+    padding: 5px; 
+    margin: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
+    ">
+    &lt; IndexJS &gt;
+}

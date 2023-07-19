@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part2 - Video10 Aula06 ex003</title>
+    <link rel="stylesheet" href="indexHF.css">
+    <style> 
+        body {
+            background-color: gray;
+            background-image: url(https://i1.pickpik.com/photos/988/757/277/texture-wall-gray-wall-texture-preview.jpg);
+            color: black;
+            font: normal 13pt Arial;
+        }
+        a, p, code {
+            font-size: .8em;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html"> 
+        &lt; IndexJS &gt;
+        </a>
+        <p>ex003</p>
+    </header>
+    <h1>Tratamento de Dados Part2</h1>
+    <p>Video10 Aula06</p>
+    <hr>
+    <h2>Bibliografia Recomendada:</h2>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials" target="_blank">
+        https://developer.mozilla.org/en-US/docs/Web/Tutorials</a>
+
+    
+    <h2>Links dos Videos:</h2>
+    <a href="https://youtu.be/OJgu_KCCUSY" target="_blank">
+        10- Tratamento de dados - Curso JavaScript #06</a><br>
+
+
+    <h3>Playlists:</h3>
+    <a href="https://www.youtube.com/watch?v=1-w1RfGIov4&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&pp=iAQB" target="_blank">
+        Curso de JavaScript - Playlist</a><br>
+    <a href="https://www.youtube.com/@CursoemVideo/playlists" target="_blank">
+        Curso em Video - Playlists</a><br>
+
+    <code><pre>
+------------------------------------------------
+
+&lt;script&gt;
+    //var n1 = prompt('Digite um numero: ') // prompt retorna string
+    // Converte em Inteiro com o Number.parseInt() e atribui a n1
+    var n1 = Number(prompt('Digite um numero: '))
+
+    //var n2 = prompt('Digite outro numero: ')
+    var n2 = Number(prompt('Digite outro numero: '))
+
+    var n = n1 + n2 
+    var s = String(n1) + n2
+
+    /* alert('Soma dos valores: ' + n + '\n'
+    + 'Concatenacao: ' + s) */
+    alert(`Soma de ${n1} e ${n2} = ${n} \n
+    Concatenacao: ${s}`)
+
+    // (number + number ) adicao
+    // (string + string) concatenacao
+
+    /*
+     String para Numero:
+         Number.parseInt()
+         Number.parseFloat()
+         Number(n)       serve para os dois casos
+    */
+
+    /*
+     Numero para String:
+         String(n) 
+         n.toString()
+    */
+&lt;/script&gt;
+
+------------------------------------------------
+
+m@r:~$ node
+Welcome to Node.js v12.22.9.
+Type ".help" for more information.
+> var s = 'JavaScript'
+undefined
+> 'Eu estou estudando s'
+'Eu estou estudando s'
+> 'Eu estou estudando ' + s
+'Eu estou estudando JavaScript'
+> nome = 'Felipe'
+'Felipe'
+> idade = 33
+33
+> nota = 9.5
+9.5
+> nome
+'Felipe'
+> idade
+33
+> nota
+9.5
+> 'O aluno ' + nome + ' com ' + idade + ' anos tirou a nota ' + nota
+'O aluno Felipe com 33 anos tirou a nota 9.5'
+> `O aluno ${nome} com ${idade} anos tirou a nota ${nota}`
+'O aluno Felipe com 33 anos tirou a nota 9.5'
+> `Usar crase`
+'Usar crase'
+> 
+m@r:~$ 
+
+------------------------------------------------
+
+    </pre></code>
+    <footer>
+        <a href="../index.html">
+           &lt; IndexJS &gt;
+        </a>
+    </footer>
+    <hr>
+    <script> 
+       //var n1 = prompt('Digite um numero: ') // prompt retorna string
+       // Converte em Inteiro com o Number.parseInt() e atribui a n1
+       var n1 = Number(prompt('Digite um numero: '))
+
+       //var n2 = prompt('Digite outro numero: ')
+       var n2 = Number(prompt('Digite outro numero: '))
+
+       var n = n1 + n2 
+       var s = String(n1) + n2
+
+       /* alert('Soma dos valores: ' + n + '\n'
+        + 'Concatenacao: ' + s) */
+        alert(`Soma de ${n1} e ${n2} = ${n} \n
+        Concatenacao: ${s}`)
+
+       // (number + number ) adicao
+       // (string + string) concatenacao
+
+       /*
+        String para Numero:
+            Number.parseInt()
+            Number.parseFloat()
+            Number(n)       serve para os dois casos
+       */
+
+       /*
+        Numero para String:
+            String(n) 
+            n.toString()
+       */
+    </script>
+</body>
+</html>
