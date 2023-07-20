@@ -115,7 +115,8 @@
 14- 
 13- 
 12- 
-11- 
+<a href="https://youtu.be/hZG9ODUdxHo">
+    11- Operadores (Parte1) - Curso JavaScript #07</a>
 <a href="https://youtu.be/OJgu_KCCUSY" target="_blank">
     10- Tratamento de dados - Curso JavaScript #06</a>
 <a href="https://youtu.be/Vbabsye7mWo" target="_blank">
@@ -129,31 +130,6 @@
 
 ------------
 
-Bibliografia Recomendada:
-<a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials" target="_blank">
-https://developer.mozilla.org/en-US/docs/Web/Tutorials</a>
-
-Install NodeJS and NPM on Ubuntu:
-https://www.hostinger.com/tutorials/how-to-install-node-ubuntu 
-$ sudo apt install nodejs
-$ sudo apt install npm
-$ nodejs -v
-$ npm -v
-$ nodejs
 ------------------------------------------------
 
-O que o JavaScript é capaz de fazer? - Curso JavaScript #01
-    https://youtu.be/Ptbk2af68e8
-    Browser DevTools, desativar JS
-    Console:
-    > alert('Hello, World!')
-    > document.body.style.background = 'black'
 
-    Mudando a cor da logo do google:
-    > document.querySelector('img.lnXdpd').style.filter = 'grayscale(100%)'
-    > document.querySelector('img.lnXdpd').style.visibility = 'hidden'
-
-    Mudando titulo de pagina de noticias:
-    > document.querySelector('h3#lk65w8qo.title__element.headlineMain__title').innerText = 'Felipe'
-
-------------------------------------------------

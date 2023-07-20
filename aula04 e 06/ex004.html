@@ -49,9 +49,47 @@
 
 &lt;script&gt;
 
+var nome = window.prompt('Qual é o seu nome?')
+
+// Escreve na pagina e aceita tags e styles
+document.write(`
+&lt;p style="
+position: absolute; 
+top: 0%; 
+right: 0%;
+color: blue;
+"&gt;Ola &lt;strong&gt;${nome}&lt;/strong&gt;, seu nome tem ${nome.length} letras.&lt;/p&gt;
+`)
+
+document.write(`&lt;p&gt;Em maiúsculas: ${nome.toUpperCase()}&lt;/p&gt;`)
+
+alert(`Ola ${nome}, seu nome tem ${nome.length} letras.`)
+
 &lt;/script&gt;
 
 ---------------------code-----------------------
+
+m@r:~$ node
+Welcome to Node.js v12.22.9.
+Type ".help" for more information.
+> var n1 = 1545.5
+undefined
+> n1
+1545.5
+> n1.toFixed(2) // com duas casas decimais
+'1545.50'
+> n1.toFixed(2).replace('.', ',') // Trocando o ponto(en) por virgula(br)
+'1545,50'
+> n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+'R$ 1.545,50'
+> n1.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})
+'US$ 1.545,50'
+> n1.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})
+'€ 1.545,50'
+> n1.toLocaleString('pt-BR', {style: 'currency', currency: 'JPY'})
+'JP¥ 1.546'
+> 
+m@r:~$ 
 
 
 ---------------------code-----------------------
@@ -64,6 +102,21 @@
     </footer>
     <hr>
     <script> 
+        var nome = window.prompt('Qual é o seu nome?')
+
+        // Escreve na pagina e aceita tags e styles
+        document.write(`
+        <p style="
+        position: absolute; 
+        top: 3%; 
+        right: 0%; 
+        color: blue;
+        ">Ola <strong>${nome}</strong>, seu nome tem ${nome.length} letras.</p>
+        `)
+
+        document.write(`<p>Em maiúsculas: ${nome.toUpperCase()}</p>`)
+
+        alert(`Ola ${nome}, seu nome tem ${nome.length} letras.`)
 
     </script>
 </body>
