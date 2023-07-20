@@ -114,7 +114,8 @@
 15- 
 14- 
 13- 
-12- 
+<a href="https://youtu.be/BP63NhITvao">
+    12- Operadores (Parte 2) - Curso JavaScript #08</a>
 <a href="https://youtu.be/hZG9ODUdxHo">
     11- Operadores (Parte1) - Curso JavaScript #07</a>
 <a href="https://youtu.be/OJgu_KCCUSY" target="_blank">
@@ -128,8 +129,8 @@
 <a href="https://youtu.be/FdePtO5JSd0" target="_blank">
     6- Dando os primeiros passos - Curso JavaScript #03</a> 
 
-------------
-
 ------------------------------------------------
+
+
 
 
