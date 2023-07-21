@@ -20,6 +20,16 @@ header p {
     border-radius: 5px;
     font-weight: bold;
 }
+body {
+    background-color: gray;
+    background-image: url(https://i1.pickpik.com/photos/988/757/277/texture-wall-gray-wall-texture-preview.jpg);
+    color: black;
+    font: normal 13pt Arial;
+}
+a, p, code {
+    font-size: .8em;
+    color: black;
+}
 footer {
     text-align: center; 
     margin-bottom: 20px;

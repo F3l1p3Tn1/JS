@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex005</title>
+    <link rel="stylesheet" href="indexHF.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html"> 
+        &lt; IndexJS &gt;
+        </a>
+        <p>ex005</p>
+    </header>
+    <div><hr>
+        <strong>Bibliografia Recomendada:</strong><br>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials" target="_blank">
+            https://developer.mozilla.org/en-US/docs/Web/Tutorials</a><br>
+        <strong>Playlists:</strong><br>
+        <a href="https://www.youtube.com/@CursoemVideo/playlists" target="_blank">
+            Curso em Video - Playlists</a><br>
+        <a href="https://www.youtube.com/watch?v=1-w1RfGIov4&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&pp=iAQB" target="_blank">
+            Curso de JavaScript - Playlist</a>
+
+    </div>
+    <h1>Entendendo o DOM</h1>
+    <a href="https://youtu.be/H80nCKs9c2k" target="_blank">
+        Link do Video: 13- Módulo C - Entendendo o DOM</a>
+    <p>Iniciandi estudos DOM</p>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JS.</p>
+    <div id="msg">Clique aqui</div>
+    <div  name="nome">Ola!</div>
+    <div id="query">Este e:<p>querySelector</p></div>
+    <code><pre>
+------------------------------------------------
+
+Módulo C - Entendendo o DOM
+    Document Object model
+    Arvore DOM
+    Manipulando DOM
+
+Nao existe mais a extensão do VSCode:
+    Watch in Chrome (abre arquivos em um microservidor)
+        instalar plugin no Chrome
+    https://www.estudonauta.com/foruns/topic/javascript-09-introducao-ao-dom-n-existe-mais-o-watch-in-chrome/
+
+    https://www.freecodecamp.org/portuguese/news/live-server-no-vs-code-como-atualizar-automaticamente-o-seu-navegador-com-essa-extensao-simples/
+
+    Node Exec (F8 run code)
+
+------------------------------------------------
+Primeiros Passos com o DOM (Document Object Model)
+
+Arvore DOM:
+        window:
+            location 
+            document
+                html 
+                    head 
+                        meta 
+                        title
+                    body
+                        h1 
+                        p 
+                        p 
+                            strong 
+                        div
+
+            history 
+
+Selecionando:
+        por Marca
+            getElementsByTagName()
+        por ID
+            getElementByID()
+        por nome
+            getElementsByName()
+        por Classe 
+            getElementsByClassName()
+        por Seletor 
+            querySelector()
+            querySelectorA
+
+
+------------------------------------------------ 
+
+&lt;script&gt;
+window.document.write('1- Hello, World!&lt;br&gt;')
+window.document.write('2- window.document.charset : ' + window.document.charset + '&lt;br&gt;')
+window.document.write('3- window.navigator.appName : ' + window.navigator.appName + '&lt;br&gt;')
+window.document.write('3- window.navigator.cookieEnabled : ' + window.navigator.cookieEnabled + '&lt;br&gt;')
+window.document.write('3- window.navigator.doNotTrack : ' + window.navigator.doNotTrack + '&lt;br&gt;')
+window.document.write('3- window.navigator.language : ' + window.navigator.language + '&lt;br&gt;')
+window.document.write('3- window.navigator.languages : ' + window.navigator.languages + '&lt;br&gt;')
+window.document.write('3- window.navigator.appCodeName : ' + window.navigator.appCodeName + '&lt;br&gt;')
+window.document.write('3- window.navigator.appVersion : ' + window.navigator.appVersion + '&lt;br&gt;')
+window.document.write('4- window.document.url : ' + window.document.url + '&lt;br&gt;')
+
+// Elementos do DOM
+var p0 = window.document.getElementsByTagName('p')[0]
+var p1 = window.document.getElementsByTagName('p')[1]
+var p2 = window.document.getElementsByTagName('p')[2]
+var p3 = window.document.getElementsByTagName('p')[3]
+var p4 = window.document.getElementsByTagName('p')[4]
+p0.style.color = 'blue'
+p1.style.color = 'green'
+p2.style.color = 'yellow'
+window.document.write('5- parágrafos: &lt;br&gt;p0- ' 
++ p0.innerText + '&lt;br&gt;p1- ' 
++ p1.innerText + '&lt;br&gt;p2- '
++ p2.innerText + '&lt;br&gt;p3- ' 
++ p3.innerText + '&lt;br&gt;p3- '
++ p3.innerHTML + '&lt;br&gt; (p3.innerHTML ja vem formatado)')
+
+// Usando CSS
+var bg = window.document.body
+bg.style.color = 'purple'
+
+// por ID
+var d = window.document.getElementById('msg')
+d.style.background = 'green'
+d.innerText = 'Aguardando...' // altera o conteúdo
+
+// por Nome
+window.document.getElementsByName('nome')[0].innerText = 'Oi! ;)'
+
+// por Classe
+document.getElementsByClassName('classe')[1].innerHTML = 'Oi! :)'
+
+// por Seletor
+sel = document.querySelector('div#query p')
+sel.style.color = 'blue'
+sel.style.border = '1px solid black'
+
+&lt;/script&gt;
+
+------------------------------------------------
+    </pre></code>
+    <footer  class="classe">
+        <a href="../index.html">
+        &lt; IndexJS &gt;
+        </a>
+        <p  class="classe">Ola</p>
+    </footer>
+<script>
+    window.document.write('1- Hello, World!<br>')
+    window.document.write('2- window.document.charset : ' + window.document.charset + '<br>')
+    window.document.write('3- window.navigator.appName : ' + window.navigator.appName + '<br>')
+    window.document.write('3- window.navigator.cookieEnabled : ' + window.navigator.cookieEnabled + '<br>')
+    window.document.write('3- window.navigator.doNotTrack : ' + window.navigator.doNotTrack + '<br>')
+    window.document.write('3- window.navigator.language : ' + window.navigator.language + '<br>')
+    window.document.write('3- window.navigator.languages : ' + window.navigator.languages + '<br>')
+    window.document.write('3- window.navigator.appCodeName : ' + window.navigator.appCodeName + '<br>')
+    window.document.write('3- window.navigator.appVersion : ' + window.navigator.appVersion + '<br>')
+    window.document.write('4- window.document.url : ' + window.document.url + '<br>')
+
+    // Elementos do DOM
+    var p0 = window.document.getElementsByTagName('p')[0]
+    var p1 = window.document.getElementsByTagName('p')[1]
+    var p2 = window.document.getElementsByTagName('p')[2]
+    var p3 = window.document.getElementsByTagName('p')[3]
+    var p4 = window.document.getElementsByTagName('p')[4]
+    p0.style.color = 'blue'
+    p1.style.color = 'green'
+    p2.style.color = 'yellow'
+    window.document.write('5- parágrafos: <br>p0- ' 
+    + p0.innerText + '<br>p1- ' 
+    + p1.innerText + '<br>p2- '
+    + p2.innerText + '<br>p3- ' 
+    + p3.innerText + '<br>p3- '
+    + p3.innerHTML + '<br> (p3.innerHTML ja vem formatado)')
+    
+
+    // Usando CSS
+    var bg = window.document.body
+    bg.style.color = 'purple'
+
+    // por ID
+    var d = window.document.getElementById('msg')
+    d.style.background = 'green'
+    d.innerText = 'Aguardando...' // altera o conteúdo
+
+    // por Nome
+    window.document.getElementsByName('nome')[0].innerText = 'Oi! ;)'
+
+    // por Classe
+    document.getElementsByClassName('classe')[1].innerHTML = 'Oi! :)'
+
+    // por Seletor
+    sel = document.querySelector('div#query p')
+    sel.style.color = 'blue'
+    sel.style.border = '1px solid black'
+
+</script>
+</body>
+</html>
