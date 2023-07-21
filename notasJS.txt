@@ -88,13 +88,7 @@
 <a href="https://www.youtube.com/@CursoemVideo/playlists" target="_blank">
     Curso em Video - Playlists</a><br>
 <a href="https://www.youtube.com/watch?v=1-w1RfGIov4&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&pp=iAQB" target="_blank">
-    Curso de JavaScript - Playlist</a><br>
-
-
-
-
-
-
+    Curso de JavaScript - Playlist</a><br> 
 
 30- 
 29- 
@@ -111,7 +105,8 @@
 18- 
 17- 
 16- 
-15- 
+<a href="https://youtu.be/wWnBB-mZIvY">
+    15- Eventos DOM - Curso JavaScript #10</a>
 <a href="https://youtu.be/WWZX8RWLxIk">
     14- Introdução ao DOM - Curso JavaScript #09</a>
 <a href="https://youtu.be/H80nCKs9c2k">

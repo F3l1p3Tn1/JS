@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex006</title>
+    <style>
+        html {
+            background-color: lightgray;
+            background-image: url(https://p0.pxfuel.com/preview/807/508/927/textures-background-backgrounds.jpg);
+            background-size: auto;
+        }
+        body {
+            background-color: rgba(211, 211, 211, 0.603);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        a {
+            border-radius: 10px;
+            color: black;
+        }
+        div {
+            font: normal 20pt Arial;
+            background-color: green;
+            color: white;
+            width: 150px; height: 100px;
+            line-height: 100px;
+            text-align: center;
+            border-radius: 20px;
+            border: 1px solid black;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.445);
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html" style="border: 1px solid black;"> 
+        &lt; IndexJS &gt;
+        </a>
+    <h1>Eventos DOM </h1>
+    <a href="https://youtu.be/wWnBB-mZIvY" target="_blank">
+        15- Eventos DOM - Curso JavaScript #10</a><br><hr>
+    
+    <div id="area">
+        Interaja...
+    </div>
+    <div id="area2">
+        Interaja...
+    </div>
+    <ul>
+        <li>mouse enter</li>
+        <li>mouse move</li>
+        <li>mouse down</li>
+        <li>mouse up</li>
+        <li>click</li>
+        <li>mouse out</li>
+    </ul>
+
+    <p><strong>Bibliografia Recomendada:</strong> <br>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">
+        Event reference - MDN Web Docs - Mozilla
+    </a></p>
+
+    <p>
+        
+        <code><pre>
+<strong>Funções-------------------------------------
+            function ação(parâmetros){
+                bloco
+            }
+--------------------------------------------</strong>
+        </pre></code>
+    </p>
+    <a href="../index.html" style="border: 1px solid black;"> 
+        &lt; IndexJS &gt;
+        </a>
+    <script>
+
+        /* Deixar esse trecho do código fora da função
+        nao e a melhor nao e a melhor pratica devido ao escopo*/
+        var a = document.getElementById('area')
+        var b = document.getElementById('area2')
+
+        /*  Substituindo por addEventListener:
+
+            <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> */
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        b.addEventListener('mousemove', moveu)
+        b.addEventListener('mousedown', baixo)
+        b.addEventListener('mouseup', cima)
+
+        function clicar() {
+            a.innerText = 'Clicou!'
+            a.style.background = 'blue'
+        }
+        function entrar() {
+            a.innerText = 'Entrou!'
+            a.style.background = 'red'
+        }
+        function sair() {
+            a.innerText = 'Saiu!'
+            a.style.background = 'green'
+        }
+        function moveu() {
+            b.innerText = 'Moveu!'
+            b.style.background = 'gray'
+        }
+        function baixo() {
+            b.innerText = 'Apertou!'
+            b.style.background = 'orange'
+        }
+        function cima() {
+            b.innerText = 'Largou!'
+            b.style.background = 'purple'
+        }
+    </script>
+</body>
+</html>
