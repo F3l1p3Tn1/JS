@@ -49,6 +49,10 @@ div, pre {
     padding: 5px;
 }
 @media screen and (min-width: 1000px) {
+    body h1, a, p{
+        text-align: center;
+        font-size: 1em;
+    }
     div {
         border: 1px solid black;
         border-radius: 5px;
