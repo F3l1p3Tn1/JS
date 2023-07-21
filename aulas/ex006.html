@@ -19,7 +19,7 @@
             border-radius: 10px;
             color: black;
         }
-        div {
+        div.btn {
             font: normal 20pt Arial;
             background-color: green;
             color: white;
@@ -30,6 +30,22 @@
             border: 1px solid black;
             box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.445);
             display: inline-block;
+            text-indent: 0px;
+        }
+        div {
+            background-color: blue;
+            color: white;
+            width: 50px; height: 50px;
+            display: inline-flex;
+            margin: 10px;
+            border-radius: 10px;
+            border: 1px solid black;
+            line-height: 50px;
+            text-indent: 20px;
+            font-weight: bold;
+        }
+        div:hover {
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.747);
         }
     </style>
 </head>
@@ -41,12 +57,20 @@
     <a href="https://youtu.be/wWnBB-mZIvY" target="_blank">
         15- Eventos DOM - Curso JavaScript #10</a><br><hr>
     
-    <div id="area">
+    <p style="font-weight: bold; background-color: gray; border-radius: 10px;"
+    >Clique nos botoes:</p>
+
+    <div id="area" class="btn">
         Interaja...
     </div>
-    <div id="area2">
+    <div id="area2" class="btn">
         Interaja...
     </div>
+    
+    <div class="n">1</div>
+    <div class="n">2</div>
+    <div class="n">3</div>
+
     <ul>
         <li>mouse enter</li>
         <li>mouse move</li>
@@ -95,27 +119,51 @@
         function clicar() {
             a.innerText = 'Clicou!'
             a.style.background = 'blue'
+            a.style.boxShadow = 'inset 2px 2px 5px black'
         }
         function entrar() {
             a.innerText = 'Entrou!'
             a.style.background = 'red'
-        }
+            a.style.boxShadow = '2px 2px 5px black'
+        } 
         function sair() {
             a.innerText = 'Saiu!'
             a.style.background = 'green'
+            a.style.boxShadow = '1px 1px 5px rgba(0, 0, 0, 0.445)'
         }
         function moveu() {
             b.innerText = 'Moveu!'
             b.style.background = 'gray'
+            b.style.boxShadow = '1px 1px 5px rgba(0, 0, 0, 0.445)'
         }
         function baixo() {
             b.innerText = 'Apertou!'
             b.style.background = 'orange'
-        }
+            b.style.boxShadow = 'inset 1px 1px 5px black'
+        } 
         function cima() {
             b.innerText = 'Largou!'
             b.style.background = 'purple'
+            b.style.boxShadow = '1px 1px 5px black'
         }
+
+        var c0 = document.getElementsByClassName('n')[0]
+        c0.addEventListener('click', btn123)
+        function btn123() {
+            c0.innerText = 'X'
+            c0.style.background = 'red'
+            alert('BTN:')
+            c0 = document.getElementsByClassName('n')[1]
+            c0.addEventListener('click', btn123)
+            c0.addEventListener('click', btn3)
+        }
+        function btn3() {
+            c0 = document.getElementsByClassName('n')[2]
+            c0.innerText = 'X'
+            c0.style.background = 'red'
+            alert('FIM!')
+        }
+
     </script>
 </body>
 </html>
