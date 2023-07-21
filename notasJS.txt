@@ -112,7 +112,8 @@
 17- 
 16- 
 15- 
-14- 
+<a href="https://youtu.be/WWZX8RWLxIk">
+    14- Introdução ao DOM - Curso JavaScript #09</a>
 <a href="https://youtu.be/H80nCKs9c2k">
     13- Módulo C - Entendendo o DOM</a>
 <a href="https://youtu.be/BP63NhITvao">
