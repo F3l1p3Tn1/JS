@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ex007</title>
+    <title>ex007 - Somando números</title>
     <style>
         html {
             background-color: lightgray;
@@ -14,10 +14,25 @@
             background-color: rgba(211, 211, 211, 0.603);
             padding: 10px;
             border-radius: 10px;
+            text-align: center;
         }
-        a {
+        a, input, p#res {
             border-radius: 10px;
+            padding: 3px;
             color: black;
+            font-weight: bold;
+            width: 120px;
+            text-align: center;
+        }
+        div {
+            display: inline-block;
+        }
+        pre {
+            background-color: lightgray;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.452);
+            text-align: left;
         }
     </style>
 </head>
@@ -25,24 +40,50 @@
     <a href="../index.html" style="border: 1px solid black;"> 
         &lt; IndexJS &gt;
         </a>
-    <h1>Eventos DOM </h1>
-    <a href="https://youtu.be/wWnBB-mZIvY" target="_blank">
-        15- Eventos DOM - Curso JavaScript #10</a><br><hr>
+    <p>
+        <h1>Eventos DOM </h1>
+        <a href="https://youtu.be/wWnBB-mZIvY" target="_blank">
+            15- Eventos DOM - Curso JavaScript #10</a>
+    </p><hr>
     
-    
-        
-        <code><pre>
-<strong>-------------------------------------
-      
---------------------------------------------</strong>
-        </pre></code>
-    </p>
-    <a href="../index.html" style="border: 1px solid black;"> 
-        &lt; IndexJS &gt;
-        </a>
+    <h2>Somando valores</h2>
+    <input type="number" name="tn1" id="tn1"> +
+    <input type="number" name="tn2" id="tn2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div><p id="res" style="background-color: white;">Resultado</p></div>
+    <p id="p1">.</p>
+    <hr>
+    <p><a href="../index.html" style="border: 1px solid black;">
+            &lt; IndexJS &gt;</a></p>
+
+    <code><pre><strong>
+-------------------------------------
+
+&lt;script&gt;
+    function somar() {
+        var n1 = document.getElementById('tn1')
+        var n2 = document.querySelector('input#tn2')
+        n1 = Number(n1.value)
+        n2 = Number(n2.value)
+        res.innerHTML = n1 + n2
+        p1 = document.getElementById('p1')
+        p1.innerHTML = `A soma entre ${n1} e ${n2} 
+        = <strong>${n1 + n2}</strong>`
+    }
+&lt;/script&gt;
+
+-------------------------------------
+    </strong></pre></code>
     <script>
-
-
+        function somar() {
+            var n1 = document.getElementById('tn1')
+            var n2 = document.querySelector('input#tn2')
+            n1 = Number(n1.value)
+            n2 = Number(n2.value)
+            res.innerHTML = n1 + n2
+            p1 = document.getElementById('p1')
+            p1.innerHTML = `A soma entre ${n1} e ${n2} = <strong>${n1 + n2}</strong>`
+        }
     </script>
 </body>
 </html>
