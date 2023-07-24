@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex010 - Detran</title>
+    <style>
+        body {
+            background-image: url(https://dri.es/files/images/blog/javascript-powered-multichannel.gif);
+            background-attachment: fixed;
+        }
+        main {
+            background-color: rgba(211, 211, 211, 0.952);
+            font-family: Arial, Helvetica, sans-serif;
+            width: 375px; min-height: 667px;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding:5px;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.336);
+            text-align: left;
+            position: static;
+            margin: auto;
+        }
+        a {
+            color: black;
+        }
+        pre {
+            background-color: rgba(211, 211, 211, 0.897);
+            width: 550px;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding:5px;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.336);
+            margin: auto;
+            position: static;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <p><a href="../index.html" style="border: 1px solid black; padding: 2px; border-radius: 5px;">&lt; IndexJS &gt;</a></p><hr>
+
+        <h1>Sistema de Multas</h1>
+        Velocidade: <input type="number" name="txtvel" id="txtvel">
+        <input type="button" value="Verificar" onclick="calcular()">
+        <div id="res"></div>
+
+        <h2>Qual país?</h2>
+        Em qual país voce nasceu?
+        <input type="text" name="txtpais" id="txtpais">
+        <input type="button" value="verificar" onclick="verpais()">
+        <div id="respais"></div>
+
+        <hr>
+        <p> Links: <br>
+            <a href="https://youtu.be/cOdG4eACN2A" target="_blank">
+                17- Condições (Parte 1) - Curso JavaScript #11</a><br>
+            <a href="https://youtu.be/cOdG4eACN2A" target="_blank">
+                16- Condições (Parte 1) - Curso JavaScript #11</a><br>
+            <a href="https://www.youtube.com/watch?v=1-w1RfGIov4&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&pp=iAQB" target="_blank">
+                Curso de JavaScript - Playlist</a><br> 
+        </p>
+        <hr>
+    <code><pre>
+----------------------------------------------------
+Script desta pagina:
+
+&lt;script&gt;
+function calcular() {
+var txtv = document.querySelector('input#txtvel')
+var res = document.querySelector('div#res')
+var vel = Number(txtv.value)
+res.innerHTML = `&lt;p&gt;Velocidade atual de &lt;strong&gt;${vel}&lt;/strong&gt;Km/h&lt;/p&gt;`
+if (vel &gt; 60) {
+res.innerHTML += `&lt;p&gt;&lt;strong&gt;MULTA&lt;/strong&gt; por excesso de velocidade!&lt;/p&gt;`
+}
+res.innerHTML += `&lt;p&gt;Use o cinto de segurança!&lt;/p&gt;`
+}
+
+function verpais() {
+var varpais = window.document.querySelector('input#txtpais')
+var varres = document.querySelector('div#respais')
+varpais = varpais.value
+varpais = varpais.toLowerCase()
+if (varpais == 'brasil') {
+varres.innerHTML = '&lt;p&gt;Então você deve ser brasileiro.&lt;/p&gt;'
+} else {
+varres.innerHTML = '&lt;p&gt;Então você deve ser estrangeiro.&lt;/p&gt;'
+}
+}
+&lt;/script&gt;
+
+----------------------------------------------------
+
+// ex008.js
+var vel = 60.5
+console.log(`A velocidade e de ${vel}km/h`)
+if (vel > 60) {
+    console.log('Ultrapassou a velocidade. Multa!')
+}
+console.log('Use o cinto de segurança!')
+
+// ex009.js
+var pais =  'Brasil'
+console.log(`Vivendo no(a) ${pais}`)
+if (pais == 'Brasil') {
+    console.log('Brasileiro')
+} else {
+    console.log(`Estrangeiro`)
+}
+
+----------------------------------------------------
+    </pre></code>
+    <p><a href="../index.html" style="border: 1px solid black; padding: 2px; border-radius: 5px;">&lt; IndexJS &gt;</a></p><hr>
+    </main>
+    <script>
+        function calcular() {
+            var txtv = document.querySelector('input#txtvel')
+            var res = document.querySelector('div#res')
+            var vel = Number(txtv.value)
+            res.innerHTML = `<p>Velocidade atual de <strong>${vel}</strong>Km/h</p>`
+            if (vel > 60) {
+                res.innerHTML += `<p><strong>MULTA</strong> por excesso de velocidade!</p>`
+            }
+            res.innerHTML += `<p>Use o cinto de segurança!</p>`
+        }
+
+        function verpais() {
+            var varpais = window.document.querySelector('input#txtpais')
+            var varres = document.querySelector('div#respais')
+            varpais = varpais.value
+            varpais = varpais.toLowerCase()
+            if (varpais == 'brasil') {
+                varres.innerHTML = '<p>Então você deve ser brasileiro.</p>'
+            } else {
+                varres.innerHTML = '<p>Então você deve ser estrangeiro.</p>'
+            }
+        }
+    </script>
+</body>
+</html>

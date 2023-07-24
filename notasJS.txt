@@ -103,8 +103,10 @@
 20- 
 19- 
 18- 
-17- 
-16- 
+<a href="https://youtu.be/cOdG4eACN2A">
+    17- Condições (Parte 1) - Curso JavaScript #11</a>
+<a href="https://youtu.be/cOdG4eACN2A">
+    16- Módulo D - Condições em JavaScript </a>
 <a href="https://youtu.be/wWnBB-mZIvY">
     15- Eventos DOM - Curso JavaScript #10</a>
 <a href="https://youtu.be/WWZX8RWLxIk">
@@ -126,11 +128,16 @@
 <a href="https://youtu.be/FdePtO5JSd0" target="_blank">
     6- Dando os primeiros passos - Curso JavaScript #03</a> 
 
-
-
-
 ------------------------------------------------
-
+Modulo D:
+    Condições Simples
+        IF
+    Condições Compostas
+        IF ELSE
+    Condições Aninhadas
+        ELSE IF
+    Condições Múltiplas
+        SWITCH CASE
 
 ------------------------------------------------
 
