@@ -110,6 +110,131 @@ if (pais == 'Brasil') {
 }
 
 ----------------------------------------------------
+ex011.js 
+
+const date = new Date();
+    log('\n' + date)
+
+votar(15); votar(16); votar(18); votar(66)
+function votar(idade) {
+    if (idade < 16) {
+        var nv = ' anos. Nao vota.'
+        console.log(`${idade}${nv}`)
+        log('\n' + idade + nv)
+    } else if (idade >= 16 && idade < 18 || idade > 65) {
+        var vop = ' anos. Voto opcional.'
+            console.log(`${idade}${vop}`)
+            log('\n' + idade + vop)
+    } else {
+        var vob = ' anos. Voto obrigatório.'
+            console.log(`${idade}${vob}`)
+            log('\n' + idade + vob)
+    }
+}
+
+function log (msg) {
+    var fs = require('fs')
+    fs.appendFileSync('log', `${msg}`)
+}
+log('\n')
+
+
+// test --------------------------------
+
+// Saida de log
+/* var fs = require('fs')
+console.log("Hi!");
+fs.appendFileSync('log', 'Oi! \n'); */
+
+// Saida de log
+/*var fs = require('fs')
+var msg = '\nNew test, ok! \n'
+//console.log(msg);
+const date = new Date();
+fs.appendFileSync('log', `${msg} | ${date}`); */
+
+// test --------------------------------
+
+----------------------------------------------------
+ex012.js 
+
+// func pega a hora e cumprimenta
+const date = new Date()
+var hora = date.getHours()
+var min = date.getMinutes()
+console.log('Sao ' + hora + ' horas e ' + min + ' minutos.')
+function saudacao(hora) {
+    if (hora < 6) {
+        console.log('E de madrugada!')
+    } else if (hora < 12) {
+        console.log('Bom dia!')
+    } else if (hora < 18) {
+        console.log('Boa tarde!')
+    } else if (hora >= 18) {
+        console.log('Boa noite!')
+    }
+}
+saudacao(hora)
+
+
+function test() {
+    console.log('1'); saudacao(1)
+    console.log('5'); saudacao(5)
+    console.log('6'); saudacao(6)
+    console.log('12'); saudacao(12)
+    console.log('17'); saudacao(17)
+    console.log('18'); saudacao(18)
+    console.log('19'); saudacao(19)
+    console.log('20'); saudacao(20)
+    console.log('23'); saudacao(23)
+}
+test()
+
+----------------------------------------------------
+ex013.js 
+
+
+var agora = new Date()
+var diaSem = agora.getDay()
+var hj = diaSemana(diaSem)
+console.log(`Hoje: ${hj}`)
+
+
+function diaSemana(diaSem) {
+switch(diaSem) {
+    case 0:
+        var v = 'Domingo'; break
+    case 1:
+        var v = 'Segunda'; break
+    case 2:
+        var v = 'Terça'; break
+    case 3:
+        var v = 'Quarta'; break
+    case 4:
+        var v = 'Quinta'; break
+    case 5:
+        var v = 'Sexta'; break
+    case 6:
+        var v = 'Sábado'; break
+    default:
+        var v = '[ERRO]'; break
+}
+return v
+}
+
+function test() {
+    console.log('Test:')
+    console.log('0-' + diaSemana(0))
+    console.log('1-' + diaSemana(1))
+    console.log('2-' + diaSemana(2))
+    console.log('3-' + diaSemana(3))
+    console.log('4-' + diaSemana(4))
+    console.log('5-' + diaSemana(5))
+    console.log('6-' + diaSemana(6))
+}
+test()
+
+----------------------------------------------------
     </pre></code>
     <p><a href="../index.html" style="border: 1px solid black; padding: 2px; border-radius: 5px;">&lt; IndexJS &gt;</a></p><hr>
     </main>
