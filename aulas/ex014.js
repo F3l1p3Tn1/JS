@@ -4,8 +4,8 @@ function carregar() {
     var data = new Date()
     var hora = data.getHours()
     var min = data.getMinutes()
-    var dia = data.getDay()
-    var mes = data.getMonth()
+    var dia = data.getDate()
+    var mes = data.getMonth() + 1
     var ano = data.getFullYear()
     msg.innerHTML = `${dia}/${mes}/${ano} <br> Agora são ${hora} horas e ${min} minutos.`
     if (hora >= 5 && hora < 12) {
