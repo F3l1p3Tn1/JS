@@ -100,8 +100,10 @@
 23- 
 22- 
 21- 
-20- 
-19- 
+<a href="https://youtu.be/UXSWgnbSHxs">
+    20- Exercícios JavaScript (Parte 2) - Curso JavaScript</a>
+<a href="https://youtu.be/b2K7eo5Jdj8">
+    19- Exercícios JavaScript (Parte 1) - Curso JavaScript</a>
 <a href="https://youtu.be/EEStcIe8rAM">
     18- Condições (Parte 2) - Curso JavaScript #12</a>
 <a href="https://youtu.be/cOdG4eACN2A">
