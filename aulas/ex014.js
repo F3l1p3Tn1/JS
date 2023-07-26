@@ -1,12 +1,15 @@
 function carregar() {
     var msg = document.getElementById('msg')
     var img = document.getElementById('imagem')
+    var time = document.getElementById('time')
     var data = new Date()
     var hora = data.getHours()
     var min = data.getMinutes()
     var dia = data.getDate()
     var mes = data.getMonth() + 1
     var ano = data.getFullYear()
+    var dat = new Date()
+    time.innerHTML = dat
     msg.innerHTML = `${dia}/${mes}/${ano} <br> Agora são ${hora} horas e ${min} minutos.`
     if (hora >= 5 && hora < 12) {
         // Bom dia!
@@ -26,4 +29,5 @@ function carregar() {
         msg.innerHTML += '<br>Boa noite!'
     }
 }
+
     
