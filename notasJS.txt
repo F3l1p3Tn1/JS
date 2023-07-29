@@ -99,7 +99,8 @@
 24- 
 23- 
 22- 
-21- 
+<a href="https://youtu.be/f5es-PpaUI8">
+    21- Exercícios JavaScript (Parte 3) - Curso JavaScript</a>
 <a href="https://youtu.be/UXSWgnbSHxs">
     20- Exercícios JavaScript (Parte 2) - Curso JavaScript</a>
 <a href="https://youtu.be/b2K7eo5Jdj8">

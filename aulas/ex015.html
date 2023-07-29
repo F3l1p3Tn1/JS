@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex015</title>
+    <style>
+        html {
+            background-color: gray; 
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        section {
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 10px;
+            width: 350px;
+            margin: auto;
+        }
+        input {
+            margin-bottom: 10px;
+        }
+        a {
+            color: black;
+        }
+        #btn {
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <p><a href="../index.html" style="border: 1px solid black; padding: 2px; border-radius: 5px; color: black;">&lt; IndexJS &gt;</a></p><hr>
+    </header>
+    <section>
+        <h1>Verificador de Idade</h1>
+        <div>
+            <p>Data de nascimento <br><br>
+                Ano: <br>
+                <input type="number" name="txtano" id="txtano" min="0"><br>
+                Mês <small>(em numero)</small>: <br>
+                <input type="number" name="txtano" id="txtmes" min="0"><br>
+                Dia: <br>
+                <input type="number" name="txtano" id="txtdia" min="0"><br>
+            </p>
+            <p>Sexo: 
+                <input type="radio" name="radsex" id="mas" checked>
+                <label for="mas">Masculino</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="fem">Feminino</label>
+            </p>
+            <p>
+                <input type="button" value="Verificar" id="btn" onclick="verificar()">
+            </p>
+        </div>
+        <div id="res">
+            Preencha os dados acima para ver o resultado!
+        </div>
+    </section>
+    <footer><hr>
+        <p>Links:</p>
+        <a href="https://youtu.be/f5es-PpaUI8" target="_blank">
+            21- Exercícios JavaScript (Parte 3) - Curso JavaScript</a>
+    </footer><hr>
+
+    <p><a href="../index.html" style="border: 1px solid black; padding: 2px; border-radius: 5px; color: black;">&lt; IndexJS &gt;</a></p>
+    <p>&copy;FelipeInTokyo2023</p>
+
+    <script>
+        function verificar() {
+            var data = new Date()
+            var ano = data.getFullYear()
+            var mes = data.getMonth()
+            var dia = data.getDate()
+            var fano = document.getElementById('txtano')
+            var fmes = document.getElementById('txtmes')
+            var fdia = document.getElementById('txtdia')
+            var res = document.getElementById('res')
+
+            if (fano.value < 1900 || Number(fano.value) > ano) {
+                alert('Erro! Data invalida!')
+            } else {
+                var fsex = document.getElementsByName('radsex')
+                var idade = ano - Number(fano.value)
+                var genero = ''
+                var img = document.createElement('img')
+                img.setAttribute('id', 'foto')
+                if (fsex[0].checked) {
+                    genero = 'Homem'
+                    if (idade >= 0 && idade < 10) {
+                        img.setAttribute('src', 'https://lh3.googleusercontent.com/pw/AIL4fc9DfHnEQs6Q2jASp20KJDOWpJqVxsD9bgKb6jXrlN6O5BzhQKTkWV9H37yjh1HjMahruswTQjAk5K0ft1kwNcwViBz3gOAYuzx7eiJnAZ0MCkPE_qtJosc4uNyyJjKUHMMX_EtKkKEBWJ8t6l26WVVt=w251-h250-s-no?authuser=0')
+                    } else if (idade < 21) {
+                        img.setAttribute('src', 'https://lh3.googleusercontent.com/pw/AIL4fc_p02LJoUv31yFoKcyB7WEGLd85xQ50TpNit0Zwa20kJnmifFiVOmR9b2bKocIKUgUhqh450J3CLSTUC6wmLRTbyPYKRwGne8PbPMWF4YyiV3zLIP1eUxbT162sNmquUUsLFmShv8iRXV6Ud9UL51or=w242-h250-s-no?authuser=0')
+                    } else if (idade < 50) {
+                        img.setAttribute('src', 'https://lh3.googleusercontent.com/pw/AIL4fc8liFg2JFAr0bZGu9p9L44GVADmX_Mz4bL5opmQE0f8HwGOehLz6PHYr9fgQ8e2eZ2qE4az4lY2neo3iZFS0sKK1R0k-f5Cqe7T5DYDNJSIkQnPNN1xqC3AT_1raiLbc0FJQaGQJjBibGlUb7VDen0W=w262-h250-s-no?authuser=0')
+                    } else {
+                        img.setAttribute('src', 'https://lh3.googleusercontent.com/pw/AIL4fc8i-6R_OpAO9AwWEjacUHrrbwGOSL_yBRpRnCWU5KqVrEis1a_p1KKlhJflYQZp-QsL93OZlTkrSDrRdIBx6jkSL9yDINioONb4L49NIp4hbVussbzPLETAlWItSDq6W2FSrePd91qrOeHmsvprrF4p=w250-h250-s-no?authuser=0')
+                    }
+                } else if (fsex[1].checked) {
+                    genero = 'Mulher'
+                    if (idade >= 0 && idade < 10) {
+                        img.setAttribute('src', 'https://lh3.googleusercontent.com/pw/AIL4fc-f0DtHbqq_QkPn-pNXEdjBRqpduXTYZBj0TiT06ws9KwDRu1zdSijE_QTDC_GR5abwUtM4-3j8ERNLSVU_qI1gJELCASCZUpJxTKOgv1GDkHqr_6IKO5rUQGFqHsEkv4nXISZMN_yiTsCL54766Mi-=w245-h250-s-no?authuser=0')
+                    } else if (idade < 21) {
+                        img.setAttribute('src', 'https://lh3.googleusercontent.com/pw/AIL4fc8naOnyosu6Raf6vKgtLwwxttLA1e-kg-WEYyyWPgPXB7kAqHer_TU-ckJdLvU4uwD_opj8ZP6V_-bK2zI7lYIbIEEXiNnDbsHz3gbGKuFdq9FpmKtW0P5pOHEUQrEbJ7JaiSpP5CHhhZ4jOoefmK0i=w248-h250-s-no?authuser=0')
+                    } else if (idade < 50) {
+                        img.setAttribute('src', 'https://lh3.googleusercontent.com/pw/AIL4fc90O4OeF4BZkl0a1vckq9kWNgAdT1USDkO3t1kXDQmMfpSpQpQ-L6uc9Yny2OJNumtulHuHh2wEyYvmoDInQcyt9k290Sb-8Gx3ptd-BmZkGkqHbSR2EvAvrEitgZXVr1jOznGGS-cHXD7IxwjdtlQc=w241-h250-s-no?authuser=0')
+                    } else {
+                        img.setAttribute('src', 'https://lh3.googleusercontent.com/pw/AIL4fc87QfgRrxCZ38VEfSkBI6lw41xkO25HnpDORPkKLT88fa9DMJClpU8VMWdH5G5Mh9k-kSvxifXXkKO2Ge-VtAiWQ6XlbKFeNXLgI7BnK5FgFuqeM1C1WqKIv-IShkWm9nPSWzpWvnPjWeG1O2pSH_3Z=w267-h250-s-no?authuser=0')
+                    }
+                }
+                res.innerHTML = `Detectado ${genero} com ${idade} anos.`
+                res.appendChild(img)
+            }
+        }
+    </script>
+</body>
+</html>
