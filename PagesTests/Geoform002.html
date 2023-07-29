@@ -121,21 +121,22 @@
         
     }
     document.getElementById('inpu').value += 
-    ' \n | 1- document.charset : ' + document.charset + 
-    ' \n | 2- navigator.appName : ' + navigator.appName + 
-    ' \n | 3- navigator.cookieEnabled : ' + navigator.cookieEnabled + 
-    ' \n | 4- navigator.doNotTrack : ' + navigator.doNotTrack + 
-    ' \n | 5- navigator.language : ' + navigator.language + 
-    ' \n | 6- navigator.languages : ' + navigator.languages + 
-    ' \n | 7- navigator.appCodeName : ' + navigator.appCodeName + 
-    ' \n | 8- navigator.appVersion : ' + navigator.appVersion + 
-    ' \n | 9- document.url : ' + document.url
-    ' \n | 10 - + navigator.userAgent' + navigator.userAgent
-    ' \n | 11 - + navigator.coords' + navigator.coords
+    ' <br>\n | 1- document.charset : ' + document.charset + 
+    ' <br>\n | 2- navigator.appName : ' + navigator.appName + 
+    ' <br>\n | 3- navigator.cookieEnabled : ' + navigator.cookieEnabled + 
+    ' <br>\n | 4- navigator.doNotTrack : ' + navigator.doNotTrack + 
+    ' <br>\n | 5- navigator.language : ' + navigator.language + 
+    ' <br>\n | 6- navigator.languages : ' + navigator.languages + 
+    ' <br>\n | 7- navigator.appCodeName : ' + navigator.appCodeName + 
+    ' <br>\n | 8- navigator.appVersion : ' + navigator.appVersion + 
+    ' <br>\n | 9- document.url : ' + document.url
+    ' <br>\n | 10 - + navigator.userAgent' + navigator.userAgent
+    ' <br>\n | 11 - + navigator.coords' + navigator.coords
     ;
 
     // check
-    div.innerHTML += 'ok';
+    div.innerHTML += 'ok <br>\n';
+    div.innerHTML += document.getElementById('inpu').value
     </script>
 </body>
 </html>
