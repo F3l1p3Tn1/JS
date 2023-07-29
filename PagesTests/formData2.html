@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormData2</title>
+</head>
+<style>
+    html {
+        background-color: gray;
+    }
+    a {
+        font-size: small;
+    }
+    main {
+        border: 1px solid black;
+        border-radius: 5px;
+        margin: auto;
+        width: 350px;
+        padding: 5px;
+    }
+    input {
+        margin-bottom: 10px;
+    }
+    button {
+        margin-top: 10px;
+        font-size: large;
+    }
+</style>
+<body>
+    <p> Videoaula: <br>
+        <a href="https://youtu.be/ECLctgz_1YI" target="_blank">
+            CAPTURAR E USAR DADOS DE FORMULÁRIO HTML COM JS
+        </a>
+    </p><hr>
+    <main>
+        <form action="" method="post" id="myform">
+            <div>
+                <label for="firstname">
+                    Nome: <br>
+                    <input type="text" name="firstname" id="name" required>
+                </label>
+            </div>
+            <div>
+                <label for="lastname">
+                    Sobrenome: <br>
+                    <input type="text" name="lastname" id="surname" required>
+                </label>
+            </div>
+            <div>
+                <label for="mail">
+                    Email: <br>
+                    <input type="email" name="mail" id="mymail" required>
+                </label>
+            </div>
+            <div>
+                <label for="birth">
+                    Data de nascimento: <br>
+                    <input type="date" name="birth" id="birthdate" required>
+                </label>
+            </div>
+            <div>
+                <button type="submit" id="submitbtn">Enviar dados</button>
+            </div>
+        </form><hr>
+    </main>
+    <div id="res"></div>
+    <script>
+        const btn = document.querySelector('#submitbtn')
+
+        btn.addEventListener('click', function(event) {
+            event.preventDefault()
+
+            const name = document.querySelector('#name').value
+            const surname = document.querySelector('#surname').value
+            const mymail = document.querySelector('#mymail').value
+            const birthdate = document.querySelector('#birthdate').value
+            console.table([name,surname,mymail,birthdate])
+            document.getElementById('res').innerHTML += [name,surname,mymail,birthdate]
+        })
+        
+    </script>
+</body>
+</html>
