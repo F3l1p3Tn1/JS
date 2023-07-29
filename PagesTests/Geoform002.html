@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form002</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body {
+            background-color: rgb(170, 169, 169);
+            text-align: center;
+            height: 100vh;
+            background-position: center;
+        }
+        main {
+            background-image: url(https://c0.wallpaperflare.com/preview/578/536/60/internet-whatsapp-smartphone-communication.jpg);
+            background-size: cover;
+        }
+        input, h1 {
+            background-color: white;
+            border: 1px solid black;
+            display: inline-block;
+            border-radius: 10px;
+            max-width: 500px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.527);
+        }
+        h1 {
+            font-size: 1.5em;
+        }
+        label {
+            color: transparent;
+        }
+        input:hover {
+            box-shadow: inset 0px 0px 3px black;
+        }
+        #button {
+            color: blue;
+        }
+        input#inpu {
+            
+            width: 600px;
+            /*display: none;*/
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Me envie uma Mensagem! 👇😃</h1>
+        <!-- https://formsubmit.co/mznfelipe5@gmail.com -->
+        <form action="test.json" method="get" autocomplete="on">
+        <p>
+            <label for="iusu">Nome:</label><br>
+            <input type="text" name="usu" id="iusu" required minlength="5" maxlength="30" size="30" placeholder="Nome:" autocomplete="username">
+        </p>
+        <p>
+            <label for="initial-scale">Tel ou e-mail:</label><br>
+            <input type="tel" name="tel" id="itel" required minlength="5" max="20" size="20" placeholder="Tel ou e-mail:" autocomplete="tel">
+        </p>
+        <!--
+            test: action="https://formsubmit.co/your@email.com"
+        -->
+            <label for="txt">💬 Mensagem:</label><br>
+            <input type="text" name="txt" id="txt" required
+            minlength="5" maxlength="300" placeholder="💬 Mensagem: Oi Felipe!" size="40" style="height: 50px;">
+        <p>
+            <input id="button" type="submit" value="Enviar">
+            <input id="button" type="reset" value="Limpar">
+        </p><hr>
+        <!---------------input e div para testes---------------------->
+        <p style="background-color: white;"> 
+            ------ input e div para testes ------<br>
+
+            <input type="text" name="inpu" id="inpu">
+
+            <div id="divloc" style="background-color: rgb(204, 207, 21);"></div>
+
+            <div id="div" style="background-color: white;">
+            </div>
+
+        </p>
+        </form>
+    </main>
+
+    <script>//------------------------------------------------------
+    // ------ GeoLocation
+    // https://developer.mozilla.org/pt-BR/docs/Web/API/Geolocation_API
+    // Verificando se geolocalizador esta ativado:
+    if ("geolocation" in navigator) {
+        //alert('Geo ativado!')
+        document.getElementById('inpu').value += '\n Geo ativado \n';
+    } else {
+        //alert("Ative as funções do navegador! ERRO");
+        document.write('<h1 style="background: green;">Geo desativado</h1>')
+    }
+    // ------ GeoLocation 2
+    // getCurrentPosition: apenas uma localização no inicio:
+    navigator.geolocation.getCurrentPosition(foundLocation)
+    // watchPosition: fica atualizando:
+    //navigator.geolocation.watchPosition(foundLocation)
+    function foundLocation(position) {
+        var lat = position.coords.latitude;
+        var lon = position.coords.longitude;
+        var local = lat + ', ' + lon;
+        printa(local)
+        }
+        function noLocation() {
+        $("#Near-Me").watermark("Could not find location");
+        $("#people-Near-Me").watermark("Could not find location");
+    }
+    function printa(local) {
+        //console.log(local)
+        //document.write(local)
+        div.innerHTML += '<br> 1- Location:  ' + local + '<br>'
+        
+        // Como inserir no input? ?
+        // https://www.youtube.com/watch?v=to7eeUWhZvI&t=1s onkeup
+        document.getElementById('inpu').value += ' \n| LOCATION: ' + local + '| \n';
+        // .value ;) 35.6384768, 139.7194752 
+        
+    }
+    document.getElementById('inpu').value += 
+    ' \n | 1- document.charset : ' + document.charset + 
+    ' \n | 2- navigator.appName : ' + navigator.appName + 
+    ' \n | 3- navigator.cookieEnabled : ' + navigator.cookieEnabled + 
+    ' \n | 4- navigator.doNotTrack : ' + navigator.doNotTrack + 
+    ' \n | 5- navigator.language : ' + navigator.language + 
+    ' \n | 6- navigator.languages : ' + navigator.languages + 
+    ' \n | 7- navigator.appCodeName : ' + navigator.appCodeName + 
+    ' \n | 8- navigator.appVersion : ' + navigator.appVersion + 
+    ' \n | 9- document.url : ' + document.url
+    ' \n | 10 - + navigator.userAgent' + navigator.userAgent
+    ' \n | 11 - + navigator.coords' + navigator.coords
+    ;
+
+    // check
+    div.innerHTML += 'ok';
+    </script>
+</body>
+</html>

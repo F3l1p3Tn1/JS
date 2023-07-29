@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form.html</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div {
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 10px;
+            width: 350px;
+        }
+        a {
+            font-size: small;
+        }
+        input {
+            margin: 5px;
+        }
+        button {
+            font-size: large;
+            margin: 10px;
+        }
+        #divRes {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p> Videoaulas: <br>
+            <a href="https://youtu.be/376_sY8H1wI" target="_blank">
+                Capturar dados de formulário HTML com JS</a><br>
+            <a href="https://youtu.be/AphaUpmVguI" target="_blank">
+                Como salvar e recuperar dados no localStorage
+            </a><br>
+        </p>
+        <h1>Form1</h1>
+        <form id="frmAluno">
+            Nome: <input type="text" id="nome"><br>
+            Contato: <input type="text" id="contato"><br>
+            Mensagem: <input type="text" id="mensagem"><br>
+            <button type="submit" id="btnSalvar" >Salvar</button><br>
+        </form>
+    </div>
+    <div id="divRes">
+        DIV Resultados e saídas: <br><br>
+    </div><br>
+        <form>
+            Input Resultado: <br>
+            <input type="text" id="res" style="width: 400px;"><br>
+        </form>
+
+    <script defer> // "defer" o script inicia apos o html
+            
+        var btnSalvar = document.querySelector("#btnSalvar");
+
+        btnSalvar.addEventListener("click", function(event) {
+            event.preventDefault();
+
+            var frmAluno = document.querySelector('#frmAluno')
+            console.log(frmAluno.nome.value)
+            console.log(frmAluno.contato.value)
+            console.log(frmAluno.mensagem.value)
+
+            function salva() {
+            localStorage.info = '| '
+            localStorage.info += document.getElementById("nome").value;
+            localStorage.info += ' | \n'
+            localStorage.info += document.getElementById("contato").value;
+            localStorage.info += ' | \n'
+            localStorage.info += document.getElementById("mensagem").value;
+            localStorage.info += ' |\n'
+        }
+        salva()
+        function carrega() {
+            document.getElementById('res').value += localStorage.info;
+            document.getElementById('divRes').innerHTML += localStorage.info;
+        }
+        carrega()
+        })
+    </script>
+</body>
+</html>

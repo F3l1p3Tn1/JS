@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cezar </title>
+</head>
+<body>
+    <h2>Form1</h2>
+    <form action="test.json">
+        Nome: <input type="text" name="nome" value="Felipe">
+        <small>valor fixo</small>
+
+        <p>Valor fixo do campo nome: <span id="valorFormNome"></span></p><hr>
+    </form>
+
+    <h2>Form2</h2>
+    <form action="test.json">
+        Turma: <input type="text" name="turma" id="turma" onkeyup="receber()">
+        <small>valor dinâmico</small><br>
+        <br>
+        Input recebe valor: <input type="text" name="inputTurma" id="inputTurma">
+
+        <p>Valor dinâmico: <span id="idTurma"></span></p>
+    </form>
+
+    <script>//https://www.youtube.com/watch?v=to7eeUWhZvI&t=1s videoaula
+        // Recebe nome
+        let nomeUser = document.getElementsByName("nome"); 
+        console.log(nomeUser);
+        // inspect > console > NodeList > input > defaultValue : "Felipe"
+
+        // enviar valor do nome 
+        document.getElementById('valorFormNome').innerHTML = nomeUser[0].defaultValue;
+
+        function receber() {
+            // Recebe valor quando digitar
+            var varTurma = document.getElementById('turma').value;
+            console.log(varTurma)
+
+            // Enviar dados para o input
+            document.getElementById('inputTurma').value = varTurma;
+
+
+            // Enviar dados para idTurma
+            document.getElementById('idTurma').innerHTML = varTurma;
+        }
+
+    </script>
+</body>
+</html>
