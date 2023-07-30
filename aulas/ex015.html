@@ -46,11 +46,11 @@
         <div>
             <p>Data de nascimento <br><br>
                 Ano: <br>
-                <input type="number" name="txtano" id="txtano" min="0"><br>
-                Mês <small>(em numero)</small>: <br>
-                <input type="number" name="txtano" id="txtmes" min="0"><br>
+                <input type="number" name="txtano" id="txtano" min="0" placeholder="ex: 2023"><br>
+                Mês: <br>
+                <input type="number" name="txtmes" id="txtmes" min="0" placeholder="ex: 07 (numero 2 digitos)"><br>
                 Dia: <br>
-                <input type="number" name="txtano" id="txtdia" min="0"><br>
+                <input type="number" name="txtdia" id="txtdia" min="0" placeholder="ex: 31"><br>
             </p>
             <p>Sexo: 
                 <input type="radio" name="radsex" id="mas" checked>
@@ -117,8 +117,471 @@
                         img.setAttribute('src', 'https://lh3.googleusercontent.com/pw/AIL4fc87QfgRrxCZ38VEfSkBI6lw41xkO25HnpDORPkKLT88fa9DMJClpU8VMWdH5G5Mh9k-kSvxifXXkKO2Ge-VtAiWQ6XlbKFeNXLgI7BnK5FgFuqeM1C1WqKIv-IShkWm9nPSWzpWvnPjWeG1O2pSH_3Z=w267-h250-s-no?authuser=0')
                     }
                 }
-                res.innerHTML = `Detectado ${genero} com ${idade} anos.`
-                res.appendChild(img)
+                res.innerHTML = `${genero} <br>${idade} anos`
+                
+
+                // Signo do Zodíaco
+                var nas = Number(`${fmes.value}${fdia.value}`)
+                var signo = zodiac(nas)
+                res.innerHTML += `<br>Signo Ocidental: ${signo}`
+
+                var nasc = Number(`${fano.value}${fmes.value}${fdia.value}`)
+                var h = china(nasc)
+                res.innerHTML += `<br>Signo Chines: ${h}<br>`
+
+                res.append(img)
+
+                function zodiac(nas) {
+                if (nas >= 121 && nas <= 219) {
+                var s = 'Aquário' 
+                }
+                if (nas >= 219 && nas <= 320) {
+                var s = 'Peixes' 
+                }
+                if (nas >= 321 && nas <= 420) {
+                var s = 'Áries'
+                }
+                if (nas >= 421 && nas <= 520) {
+                var s = 'Touro' 
+                }
+                if (nas >= 521 && nas <= 620) {
+                var s = 'Gêmeos' 
+                }
+                if (nas >= 621 && nas <= 722) {
+                var s = 'Câncer' 
+                }
+                if (nas >= 723 && nas <= 822) {
+                var s = 'Leão' 
+                }
+                if (nas >= 823 && nas <= 922) {
+                var s = 'Virgem' 
+                }
+                if (nas >= 923 && nas <= 1022) {
+                var s = 'Libra' 
+                }
+                if (nas >= 1023 && nas <= 1121) {
+                var s = 'Escorpião' 
+                }
+                if (nas >= 1122 && nas <= 1221) {
+                var s = 'Sagitário' 
+                }
+                if (nas >= 1222 && nas <= 120) {
+                var s = 'Capricórnio' 
+                }
+                return s
+                } 
+
+                // Horoscopo Chines:
+                // 'Rato'
+                function china(nasc) {
+                if (nasc >= 19000131 && nasc <= 19010218 ) {
+                    var h = 'Rato' 
+                }
+                if (nasc >= 19120218 && nasc <= 19130205 ) {
+                    var h = 'Rato'
+                }
+                if (nasc >= 19240205 && nasc <= 19250124 ) {
+                    var h = 'Rato'
+                }
+                if (nasc >= 19360124 && nasc <= 19370210 ) {
+                    var h = 'Rato'
+                }
+                if (nasc >= 19480210 && nasc <= 19490128 ) {
+                    var h = 'Rato'
+                }
+                if (nasc >= 19600128 && nasc <= 19610214 ) {
+                    var h = 'Rato'
+                }
+                if (nasc >= 19720215 && nasc <= 19730202 ) {
+                    var h = 'Rato'
+                }
+                if (nasc >= 19840202 && nasc <= 19850219 ) {
+                    var h = 'Rato'
+                }
+                if (nasc >= 19960219 && nasc <= 19970206 ) {
+                    var h = 'Rato'
+                }
+                if (nasc >= 20080207 && nasc <= 20090125 ) {
+                    var h = 'Rato'
+                }
+                if (nasc >= 20200125 && nasc <= 20210211 ) {
+                    var h = 'Rato'
+                }
+                // 'Búfalo'
+                if (nasc >= 19010219 && nasc <= 19020207 ) {
+                    var h = 'Búfalo'
+                }
+                if (nasc >= 19130206 && nasc <= 19140125 ) {
+                    var h = 'Búfalo'
+                }
+                if (nasc >= 19250125 && nasc <= 19260212 ) {
+                    var h = 'Búfalo'
+                }
+                if (nasc >= 19370211 && nasc <= 19380130 ) {
+                    var h = 'Búfalo'
+                }
+                if (nasc >= 19490129 && nasc <= 19500216 ) {
+                    var h = 'Búfalo'
+                }
+                if (nasc >= 19610215 && nasc <= 19620204 ) {
+                    var h = 'Búfalo'
+                }
+                if (nasc >= 19730203 && nasc <= 19740122 ) {
+                    var h = 'Búfalo'
+                }
+                if (nasc >= 19850220 && nasc <= 19860208 ) {
+                    var h = 'Búfalo'
+                }
+                if (nasc >= 19970207 && nasc <= 19980127 ) {
+                    var h = 'Búfalo'
+                }
+                if (nasc >= 20090126 && nasc <= 20100213 ) {
+                    var h = 'Búfalo'
+                }
+                if (nasc >= 20210212 && nasc <= 20220131 ) {
+                    var h = 'Búfalo'
+                }
+                // 'Tigre'
+                if (nasc >= 19020208 && nasc <= 19030228 ) {
+                    var h = 'Tigre'
+                }
+                if (nasc >= 19140126 && nasc <= 19150213 ) {
+                    var h = 'Tigre'
+                }
+                if (nasc >= 19260213 && nasc <= 19270201 ) {
+                    var h = 'Tigre'
+                }
+                if (nasc >= 19380131 && nasc <= 19390218 ) {
+                    var h = 'Tigre'
+                }
+                if (nasc >= 19500217 && nasc <= 19510205 ) {
+                    var h = 'Tigre'
+                }
+                if (nasc >= 19620205 && nasc <= 19630124 ) {
+                    var h = 'Tigre'
+                }
+                if (nasc >= 19740123 && nasc <= 19750210 ) {
+                    var h = 'Tigre'
+                }
+                if (nasc >= 19860209 && nasc <= 19870128 ) {
+                    var h = 'Tigre'
+                }
+                if (nasc >= 19980128 && nasc <= 19990215 ) {
+                    var h = 'Tigre'
+                }
+                if (nasc >= 20100214 && nasc <= 20110202 ) {
+                    var h = 'Tigre'
+                }
+                if (nasc >= 20220201 && nasc <= 20230121 ) {
+                    var h = 'Tigre'
+                }
+
+                // 'Coelho' 
+                if (nasc >= 19030129 && nasc <= 19040215 ) {
+                    var h = 'Coelho'
+                }
+                if (nasc >= 19150214 && nasc <= 19160202 ) {
+                    var h = 'Coelho'
+                }
+                if (nasc >= 19270202 && nasc <= 19280122 ) {
+                    var h = 'Coelho'
+                }
+                if (nasc >= 19390219 && nasc <= 19400207 ) {
+                    var h = 'Coelho'
+                }
+                if (nasc >= 19510206 && nasc <= 19520126 ) {
+                    var h = 'Coelho'
+                }
+                if (nasc >= 19630125 && nasc <= 19640212 ) {
+                    var h = 'Coelho'
+                }
+                if (nasc >= 19750211 && nasc <= 19760130 ) {
+                    var h = 'Coelho'
+                }
+                if (nasc >= 19870129 && nasc <= 19880216 ) {
+                    var h = 'Coelho'
+                }
+                if (nasc >= 19990216 && nasc <= 20000204 ) {
+                    var h = 'Coelho'
+                }
+                if (nasc >= 20110203 && nasc <= 20120122 ) {
+                    var h = 'Coelho'
+                }
+                if (nasc >= 20230122 && nasc <= 20240209 ) {
+                    var h = 'Coelho'
+                }
+
+                // 'Dragão' 
+                if (nasc >= 19040216 && nasc <= 19050203 ) {
+                    var h = 'Dragão'
+                }
+                if (nasc >= 19160203 && nasc <= 19170122 ) {
+                    var h = 'Dragão'
+                }
+                if (nasc >= 19280123 && nasc <= 19290209 ) {
+                    var h = 'Dragão'
+                }
+                if (nasc >= 19400208 && nasc <= 19410126 ) {
+                    var h = 'Dragão'
+                }
+                if (nasc >= 19520127 && nasc <= 19530213 ) {
+                    var h = 'Dragão'
+                }
+                if (nasc >= 19640213 && nasc <= 19650201 ) {
+                    var h = 'Dragão'
+                }
+                if (nasc >= 19760131 && nasc <= 19770217 ) {
+                    var h = 'Dragão'
+                }
+                if (nasc >= 19880217 && nasc <= 19890205 ) {
+                    var h = 'Dragão'
+                }
+                if (nasc >= 20000205 && nasc <= 20010124 ) {
+                    var h = 'Dragão'
+                }
+                if (nasc >= 20120123 && nasc <= 20130209 ) {
+                    var h = 'Dragão'
+                }
+                if (nasc >= 20240210 && nasc <= 20250128 ) {
+                    var h = 'Dragão'
+                }
+
+                // 'Serpente'
+                if (nasc >= 19050204 && nasc <= 19060124 ) {
+                    var h = 'Serpente'
+                }
+                if (nasc >= 19170123 && nasc <= 19180210 ) {
+                    var h = 'Serpente'
+                }
+                if (nasc >= 19290210 && nasc <= 19300129 ) {
+                    var h = 'Serpente'
+                }
+                if (nasc >= 19410127 && nasc <= 19420214 ) {
+                    var h = 'Serpente'
+                }
+                if (nasc >= 19530214 && nasc <= 19540202 ) {
+                    var h = 'Serpente'
+                }
+                if (nasc >= 19650202 && nasc <= 19660120 ) {
+                    var h = 'Serpente'
+                }
+                if (nasc >= 19770218 && nasc <= 19780206 ) {
+                    var h = 'Serpente'
+                }
+                if (nasc >= 19890206 && nasc <= 19900126 ) {
+                    var h = 'Serpente'
+                }
+                if (nasc >= 20010125 && nasc <= 20020211 ) {
+                    var h = 'Serpente'
+                }
+                if (nasc >= 20130210 && nasc <= 20140130 ) {
+                    var h = 'Serpente'
+                }
+
+                // 'Cavalo'
+                if (nasc >= 19060125 && nasc <= 19070212 ) {
+                    var h = 'Cavalo'
+                }
+                if (nasc >= 19180211 && nasc <= 19190131 ) {
+                    var h = 'Cavalo'
+                }
+                if (nasc >= 19300130 && nasc <= 19310216 ) {
+                    var h = 'Cavalo'
+                }
+                if (nasc >= 19420215 && nasc <= 19430204 ) {
+                    var h = 'Cavalo'
+                }
+                if (nasc >= 19540203 && nasc <= 19550123 ) {
+                    var h = 'Cavalo'
+                }
+                if (nasc >= 19660121 && nasc <= 19670208 ) {
+                    var h = 'Cavalo'
+                }
+                if (nasc >= 19780207 && nasc <= 19790127 ) {
+                    var h = 'Cavalo'
+                }
+                if (nasc >= 19900127 && nasc <= 19910214 ) {
+                    var h = 'Cavalo'
+                }
+                if (nasc >= 20020212 && nasc <= 20030131 ) {
+                    var h = 'Cavalo'
+                }
+                if (nasc >= 20140131 && nasc <= 20150218 ) {
+                    var h = 'Cavalo'
+                }
+
+                // 'Cabra' 
+                if (nasc >= 19070213 && nasc <= 19080201 ) {
+                    var h = 'Cabra'
+                }
+                if (nasc >= 19190201 && nasc <= 19200219 ) {
+                    var h = 'Cabra'
+                }
+                if (nasc >= 19310217 && nasc <= 19320205 ) {
+                    var h = 'Cabra'
+                }
+                if (nasc >= 19430205 && nasc <= 19440124 ) {
+                    var h = 'Cabra'
+                }
+                if (nasc >= 19550124 && nasc <= 19560211 ) {
+                    var h = 'Cabra'
+                }
+                if (nasc >= 19670209 && nasc <= 19680129 ) {
+                    var h = 'Cabra'
+                }
+                if (nasc >= 19790128 && nasc <= 19800215 ) {
+                    var h = 'Cabra'
+                }
+                if (nasc >= 19910215 && nasc <= 19920203 ) {
+                    var h = 'Cabra'
+                }
+                if (nasc >= 20030201 && nasc <= 20040121 ) {
+                    var h = 'Cabra'
+                }
+                if (nasc >= 20150219 && nasc <= 20160207 ) {
+                    var h = 'Cabra'
+                }
+
+                // 'Macaco' 
+                if (nasc >= 19080202 && nasc <= 19090121 ) {
+                    var h = 'Macaco'
+                }
+                if (nasc >= 19200220 && nasc <= 19210107 ) {
+                    var h = 'Macaco'
+                }
+                if (nasc >= 19320206 && nasc <= 19330125 ) {
+                    var h = 'Macaco'
+                }
+                if (nasc >= 19440125 && nasc <= 19450212 ) {
+                    var h = 'Macaco'
+                }
+                if (nasc >= 19560212 && nasc <= 19570130 ) {
+                    var h = 'Macaco'
+                }
+                if (nasc >= 19680130 && nasc <= 19690216 ) {
+                    var h = 'Macaco'
+                }
+                if (nasc >= 19800216 && nasc <= 19810204 ) {
+                    var h = 'Macaco'
+                }
+                if (nasc >= 19920204 && nasc <= 19930122 ) {
+                    var h = 'Macaco'
+                }
+                if (nasc >= 20040122 && nasc <= 20050208 ) {
+                    var h = 'Macaco'
+                }
+                if (nasc >= 20160208 && nasc <= 20170127 ) {
+                    var h = 'Macaco'
+                }
+
+                // 'Cachorro'
+                if (nasc >= 19100210 && nasc <= 19110129 ) {
+                    var h = 'Cachorro'
+                }
+                if (nasc >= 19220128 && nasc <= 19230215 ) {
+                    var h = 'Cachorro'
+                }
+                if (nasc >= 19340215 && nasc <= 19350203 ) {
+                    var h = 'Cachorro'
+                }
+                if (nasc >= 19460202 && nasc <= 19470121 ) {
+                    var h = 'Cachorro'
+                }
+                if (nasc >= 19580218 && nasc <= 19590207 ) {
+                    var h = 'Cachorro'
+                }
+                if (nasc >= 19700206 && nasc <= 19710126 ) {
+                    var h = 'Cachorro'
+                }
+                if (nasc >= 19820125 && nasc <= 19830212 ) {
+                    var h = 'Cachorro'
+                }
+                if (nasc >= 19940210 && nasc <= 19950130 ) {
+                    var h = 'Cachorro'
+                }
+                if (nasc >= 20060129 && nasc <= 20070217 ) {
+                    var h = 'Cachorro'
+                }
+                if (nasc >= 20180219 && nasc <= 20190204 ) {
+                    var h = 'Cachorro'
+                }
+
+                // 'Galo' 
+                if (nasc >= 19090122 && nasc <= 19100209 ) {
+                    var h = 'Galo'
+                }
+                if (nasc >= 19210208 && nasc <= 19220127 ) {
+                    var h = 'Galo'
+                }
+                if (nasc >= 19330126 && nasc <= 19340214 ) {
+                    var h = 'Galo'
+                }
+                if (nasc >= 19450213 && nasc <= 19460201 ) {
+                    var h = 'Galo'
+                }
+                if (nasc >= 19570131 && nasc <= 19580217 ) {
+                    var h = 'Galo'
+                }
+                if (nasc >= 19690217 && nasc <= 19700205 ) {
+                    var h = 'Galo'
+                }
+                if (nasc >= 19810205 && nasc <= 19820124 ) {
+                    var h = 'Galo'
+                }
+                if (nasc >= 19930123 && nasc <= 19940209 ) {
+                    var h = 'Galo'
+                }
+                if (nasc >= 20050209 && nasc <= 20060128 ) {
+                    var h = 'Galo'
+                }
+                if (nasc >= 20170128 && nasc <= 20180218 ) {
+                    var h = 'Galo'
+                }
+
+                // 'Javali'
+                if (nasc >= 19110130 && nasc <= 19120217 ) {
+                    var h = 'Javali'
+                }
+                if (nasc >= 19230216 && nasc <= 19240204 ) {
+                    var h = 'Javali'
+                }
+                if (nasc >= 19350204 && nasc <= 19360123 ) {
+                    var h = 'Javali'
+                }
+                if (nasc >= 19470122 && nasc <= 19480209 ) {
+                    var h = 'Javali'
+                }
+                if (nasc >= 19590208 && nasc <= 19600127 ) {
+                    var h = 'Javali'
+                }
+                if (nasc >= 19710127 && nasc <= 19720214 ) {
+                    var h = 'Javali'
+                }
+                if (nasc >= 19830213 && nasc <= 19840201 ) {
+                    var h = 'Javali'
+                }
+                if (nasc >= 19950131 && nasc <= 19960218 ) {
+                    var h = 'Javali'
+                }
+                if (nasc >= 20070218 && nasc <= 20080206 ) {
+                    var h = 'Javali'
+                }
+                if (nasc >= 20190205 && nasc <= 20200124 ) {
+                    var h = 'Javali'
+                }
+                return h 
+                }
+                res.innerHTML += `<br>`
+                var hjz = Number(`${mes}${dia}`)
+                res.innerHTML += `<br>`
+                var hojez = zodiac(hjz)
+
+                var hjc = Number(`${ano}0${mes}${dia}`)
+                var hojec = china(hjc)
+               
+                res.innerHTML += `Hoje estamos em: <br> ocidental= ${hojez} e chines= ${hojec}`
+               
+
             }
         }
     </script>
