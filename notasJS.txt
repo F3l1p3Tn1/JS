@@ -97,8 +97,11 @@
 26- 
 25- 
 24- 
-23- 
-22- 
+<a href="https://youtu.be/5rZqYPKIwkY">
+    23- Repetições (Parte 1) - Curso JavaScript #13</a>
+<a href="https://youtu.be/3emz6rpcJyA">
+    22- Módulo E - Repetições em JavaScript</a>
+
 <a href="https://youtu.be/f5es-PpaUI8">
     21- Exercícios JavaScript (Parte 3) - Curso JavaScript</a>
 <a href="https://youtu.be/UXSWgnbSHxs">
