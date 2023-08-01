@@ -92,6 +92,148 @@
             -->
             <p>&copy;CursoemVideo</p><hr>
         </div>
+        <div style="background-color: rgba(128, 128, 128, 0.89); text-align: left; padding: 10px; font-weight: normal; font-size: medium; color: black; font-style: normal; width: 1000px">
+            <code><pre>
+------------------------------------------------HTML
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-br"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;ex014&lt;/title&gt;
+&lt;style&gt;
+body {
+background-color: rgb(70,142,236);
+font-family: Arial, Helvetica, sans-serif;
+font: normal 15pt Arial;
+}
+body a {
+color: white;
+}
+header {
+color: white;
+text-align: center;
+}
+section {
+background-color: white;
+border-radius: 10px;
+padding: 15px;
+width: 350px;
+margin: auto;
+box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.37);
+}
+section p {
+font-size: small;
+}
+div {
+text-align: center;
+padding: 8px;
+font-weight: bold;
+border: 1px solid black;
+border-radius: 10px;
+margin: 5px;
+box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.356);
+}
+footer {
+color: white;
+text-align: center;
+font-style: italic;
+}
+footer a, p {
+color: white;
+font-size: small;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body onload="carregar()"&gt;
+&lt;p&gt;&lt;a href="../index.html" style="border: 1px solid white; padding: 2px; border-radius: 5px;"&gt;&lt; IndexJS &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;header&gt;
+&lt;h1&gt;24 Horas&lt;/h1&gt;
+&lt;/header&gt;
+&lt;section&gt;
+&lt;div id="msg"&gt;
+mensagem carregando...
+&lt;/div&gt;
+&lt;div id="foto"&gt;
+&lt;img id="imagem" src="" alt="imagem carregando..."&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;footer&gt;
+&lt;div&gt;&lt;p id="time"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;img src="" alt=""&gt;
+&lt;a href="https://youtu.be/UXSWgnbSHxs" target="_blank"&gt;
+20- Exercícios JavaScript (Parte 2) - Curso JavaScript&lt;/a&gt;&lt;br&gt;
+&lt;a href="https://youtu.be/b2K7eo5Jdj8" target="_blank"&gt;
+19- Exercícios JavaScript (Parte 1) - Curso JavaScript&lt;/a&gt;&lt;br&gt;
+&lt;a href="https://github.com/cursoemvideo/" target="_blank"&gt;
+https://github.com/cursoemvideo/
+&lt;/a&gt;&lt;br&gt;
+&lt;a href="https://github.com/gustavoguanabara" target="_blank"&gt;
+https://github.com/gustavoguanabara
+&lt;/a&gt;&lt;br&gt;
+&lt;a href="https://www.pexels.com/pt-br/" target="_blank"&gt;
+https://www.pexels.com/pt-br/
+&lt;/a&gt;&lt;br&gt;
+&lt;a href="https://www.google.com/photos/" target="_blank"&gt;
+https://www.google.com/photos/
+&lt;/a&gt;
+&lt;!--
+https://photos.app.goo.gl/jn54gbfHGenSLULB7 dia
+https://lh3.googleusercontent.com/pw/AIL4fc-CR5RW1VUKsLZzjrVkgaiw1A3quIaXQL7mhATXQEe2KqGWzancvaGv6EV8aagqZV37LZUh-CUDC-YpcRckl7KI5WpGjOQHueq00EfDFzZ1hvOIXNX24jobgyTbXVhUYdffTHzpUAY--zm9bfAVo4K_=w262-h250-s-no?authuser=0
+https://photos.app.goo.gl/XWqiBgCKo6Fvp8dz8 tarde
+https://lh3.googleusercontent.com/pw/AIL4fc94lDzHb5yOiRFYCQSimMUQqprjUUETdQjyLxCAox7Ns5x_pMLmswUVF2XvXJFxN7FasC1AAvIpQ9oQh3RPVxjVx9QOYDx7x8V77PtTr58ORit5ABvfp5xGDPTUfHf7x0IcM3Shiu_9bXe48B-oqflP=w257-h250-s-no?authuser=0
+https://photos.app.goo.gl/RXpCPy2gsfr36iG39 noite
+https://lh3.googleusercontent.com/pw/AIL4fc-dS3GuZ5McZwY0BtPCLoAuyvgJ2t9YhsU20cy_hrcl3sXDWgaL33K9yGwRllsd2BninFdUlallgdbFwmGyldsV4XVJ6ixKX64ZrfHjxfIPoe51T4Mj4iJfNVyMfj7UX0jGt4H2sQDRDHMMt7KGiKgc=w251-h250-s-no?authuser=0
+--&gt;
+&lt;p&gt;&copy;CursoemVideo&lt;/p&gt;&lt;hr&gt;
+&lt;/div&gt;
+&lt;div style="background-color: rgba(128, 128, 128, 0.89); text-align: left; padding: 10px;"&gt;
+&lt;code&gt;&lt;pre&gt;
+
+&lt;/pre&gt;&lt;/code&gt;
+&lt;/div&gt;
+&lt;/footer&gt;
+&lt;script src="ex014.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+------------------------------------------------JS
+function carregar() {
+    var msg = document.getElementById('msg')
+    var img = document.getElementById('imagem')
+    var time = document.getElementById('time')
+    var data = new Date()
+    var hora = data.getHours()
+    var min = data.getMinutes()
+    var dia = data.getDate()
+    var mes = data.getMonth() + 1
+    var ano = data.getFullYear()
+    var dat = new Date()
+    time.innerHTML = dat
+    msg.innerHTML = `${dia}/${mes}/${ano} <br> Agora são ${hora} horas e ${min} minutos.`
+    if (hora >= 5 && hora < 12) {
+        // Bom dia!
+        img.src = "https://lh3.googleusercontent.com/pw/AIL4fc-CR5RW1VUKsLZzjrVkgaiw1A3quIaXQL7mhATXQEe2KqGWzancvaGv6EV8aagqZV37LZUh-CUDC-YpcRckl7KI5WpGjOQHueq00EfDFzZ1hvOIXNX24jobgyTbXVhUYdffTHzpUAY--zm9bfAVo4K_=w262-h250-s-no?authuser=0"
+        document.body.style.background = '#b08f56'
+        msg.innerHTML += '<br>Bom dia!'
+
+    } else if (hora >= 12 && hora <= 18) {
+        // Boa tarde!
+        img.src='https://lh3.googleusercontent.com/pw/AIL4fc94lDzHb5yOiRFYCQSimMUQqprjUUETdQjyLxCAox7Ns5x_pMLmswUVF2XvXJFxN7FasC1AAvIpQ9oQh3RPVxjVx9QOYDx7x8V77PtTr58ORit5ABvfp5xGDPTUfHf7x0IcM3Shiu_9bXe48B-oqflP=w257-h250-s-no?authuser=0'
+        document.body.style.background = '#e66906'
+        msg.innerHTML += '<br>Boa tarde!'
+    } else {
+        // Boa noite!
+        img.src = 'https://lh3.googleusercontent.com/pw/AIL4fc-dS3GuZ5McZwY0BtPCLoAuyvgJ2t9YhsU20cy_hrcl3sXDWgaL33K9yGwRllsd2BninFdUlallgdbFwmGyldsV4XVJ6ixKX64ZrfHjxfIPoe51T4Mj4iJfNVyMfj7UX0jGt4H2sQDRDHMMt7KGiKgc=w251-h250-s-no?authuser=0'
+        document.body.style.background = '#0d2f56'
+        msg.innerHTML += '<br>Boa noite!'
+    }
+}
+                ------------------------------------------------
+            </pre></code>
+        </div>
     </footer>
     <script src="ex014.js"></script>
 </body>

@@ -29,5 +29,3 @@ function carregar() {
         msg.innerHTML += '<br>Boa noite!'
     }
 }
-
-    

@@ -67,6 +67,600 @@
             Preencha os dados acima para ver o resultado!
         </div>
     </section>
+    <div style="background-color: rgba(128, 128, 128, 0.89); text-align: left; padding: 10px;">
+        <code><pre>
+            -------------------------------------------------------------
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-br"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;ex015&lt;/title&gt;
+&lt;style&gt;
+html {
+background-image: url(https://www.publicdomainpictures.net/pictures/260000/velka/time-losing-time-clock-pocket-w.jpg);
+background-color: gray; 
+background-position: center center;
+font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+}
+section {
+background-color:rgb(158, 157, 157);
+border: 1px solid black;
+border-radius: 10px;
+box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.507);
+padding: 10px;
+width: 350px;
+margin: auto;
+}
+input {
+margin-bottom: 10px;
+}
+a {
+color: black;
+}
+#btn {
+font-size: large;
+}
+footer {
+background-color:rgb(158, 157, 157);
+border-radius: 5px;
+box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.507);
+padding: 1px;
+margin: 5px 5px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;&lt;a href="../index.html" style="border: 1px solid black; padding: 2px; border-radius: 5px; color: black; background-color: rgb(158, 157, 157);"&gt;&lt; IndexJS &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;section&gt;
+&lt;h1&gt;Verificador de Idade&lt;/h1&gt;
+&lt;div&gt;
+&lt;p&gt;Data de nascimento &lt;br&gt;&lt;br&gt;
+Ano: &lt;br&gt;
+&lt;input type="number" name="txtano" id="txtano" min="0" placeholder="ex: 2023"&gt;&lt;br&gt;
+Mês: &lt;br&gt;
+&lt;input type="number" name="txtmes" id="txtmes" min="0" placeholder="ex: 07 (numero 2 digitos)"&gt;&lt;br&gt;
+Dia: &lt;br&gt;
+&lt;input type="number" name="txtdia" id="txtdia" min="0" placeholder="ex: 31"&gt;&lt;br&gt;
+&lt;/p&gt;
+&lt;p&gt;Sexo: 
+&lt;input type="radio" name="radsex" id="mas" checked&gt;
+&lt;label for="mas"&gt;Masculino&lt;/label&gt;
+&lt;input type="radio" name="radsex" id="fem"&gt;
+&lt;label for="fem"&gt;Feminino&lt;/label&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;input type="button" value="Verificar" id="btn" onclick="verificar()"&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id="res"&gt;
+Preencha os dados acima para ver o resultado!
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;footer&gt;
+&lt;p&gt;Links:&lt;/p&gt;
+&lt;a href="https://youtu.be/f5es-PpaUI8" target="_blank"&gt;
+21- Exercícios JavaScript (Parte 3) - Curso JavaScript&lt;/a&gt;
+
+&lt;p&gt;&lt;a href="../index.html" style="border: 1px solid black; padding: 2px; border-radius: 5px; color: black;"&gt;&lt; IndexJS &gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&copy;FelipeInTokyo2023&lt;/p&gt;
+&lt;/footer&gt;
+
+&lt;script&gt;
+function verificar() {
+var data = new Date()
+var ano = data.getFullYear()
+var mes = data.getMonth()
+var dia = data.getDate()
+var fano = document.getElementById('txtano')
+var fmes = document.getElementById('txtmes')
+var fdia = document.getElementById('txtdia')
+var res = document.getElementById('res')
+
+if (fano.value &lt; 1900 || Number(fano.value) &gt; ano) {
+alert('Erro! Data invalida!')
+} else {
+var fsex = document.getElementsByName('radsex')
+var idade = ano - Number(fano.value)
+var genero = ''
+var img = document.createElement('img')
+img.setAttribute('id', 'foto')
+if (fsex[0].checked) {
+genero = 'Homem'
+if (idade &gt;= 0 && idade &lt; 15) {
+img.setAttribute('src', 'https://lh3.googleusercontent.com/pw/AIL4fc9DfHnEQs6Q2jASp20KJDOWpJqVxsD9bgKb6jXrlN6O5BzhQKTkWV9H37yjh1HjMahruswTQjAk5K0ft1kwNcwViBz3gOAYuzx7eiJnAZ0MCkPE_qtJosc4uNyyJjKUHMMX_EtKkKEBWJ8t6l26WVVt=w251-h250-s-no?authuser=0')
+} else if (idade &lt; 25) {
+img.setAttribute('src', 'https://lh3.googleusercontent.com/pw/AIL4fc_p02LJoUv31yFoKcyB7WEGLd85xQ50TpNit0Zwa20kJnmifFiVOmR9b2bKocIKUgUhqh450J3CLSTUC6wmLRTbyPYKRwGne8PbPMWF4YyiV3zLIP1eUxbT162sNmquUUsLFmShv8iRXV6Ud9UL51or=w242-h250-s-no?authuser=0')
+} else if (idade &lt; 45) {
+img.setAttribute('src', 'https://lh3.googleusercontent.com/pw/AIL4fc8liFg2JFAr0bZGu9p9L44GVADmX_Mz4bL5opmQE0f8HwGOehLz6PHYr9fgQ8e2eZ2qE4az4lY2neo3iZFS0sKK1R0k-f5Cqe7T5DYDNJSIkQnPNN1xqC3AT_1raiLbc0FJQaGQJjBibGlUb7VDen0W=w262-h250-s-no?authuser=0')
+} else {
+img.setAttribute('src', 'https://lh3.googleusercontent.com/pw/AIL4fc8i-6R_OpAO9AwWEjacUHrrbwGOSL_yBRpRnCWU5KqVrEis1a_p1KKlhJflYQZp-QsL93OZlTkrSDrRdIBx6jkSL9yDINioONb4L49NIp4hbVussbzPLETAlWItSDq6W2FSrePd91qrOeHmsvprrF4p=w250-h250-s-no?authuser=0')
+}
+} else if (fsex[1].checked) {
+genero = 'Mulher'
+if (idade &gt;= 0 && idade &lt; 15) {
+img.setAttribute('src', 'https://lh3.googleusercontent.com/pw/AIL4fc-f0DtHbqq_QkPn-pNXEdjBRqpduXTYZBj0TiT06ws9KwDRu1zdSijE_QTDC_GR5abwUtM4-3j8ERNLSVU_qI1gJELCASCZUpJxTKOgv1GDkHqr_6IKO5rUQGFqHsEkv4nXISZMN_yiTsCL54766Mi-=w245-h250-s-no?authuser=0')
+} else if (idade &lt; 25) {
+img.setAttribute('src', 'https://lh3.googleusercontent.com/pw/AIL4fc8naOnyosu6Raf6vKgtLwwxttLA1e-kg-WEYyyWPgPXB7kAqHer_TU-ckJdLvU4uwD_opj8ZP6V_-bK2zI7lYIbIEEXiNnDbsHz3gbGKuFdq9FpmKtW0P5pOHEUQrEbJ7JaiSpP5CHhhZ4jOoefmK0i=w248-h250-s-no?authuser=0')
+} else if (idade &lt; 45) {
+img.setAttribute('src', 'https://lh3.googleusercontent.com/pw/AIL4fc90O4OeF4BZkl0a1vckq9kWNgAdT1USDkO3t1kXDQmMfpSpQpQ-L6uc9Yny2OJNumtulHuHh2wEyYvmoDInQcyt9k290Sb-8Gx3ptd-BmZkGkqHbSR2EvAvrEitgZXVr1jOznGGS-cHXD7IxwjdtlQc=w241-h250-s-no?authuser=0')
+} else {
+img.setAttribute('src', 'https://lh3.googleusercontent.com/pw/AIL4fc87QfgRrxCZ38VEfSkBI6lw41xkO25HnpDORPkKLT88fa9DMJClpU8VMWdH5G5Mh9k-kSvxifXXkKO2Ge-VtAiWQ6XlbKFeNXLgI7BnK5FgFuqeM1C1WqKIv-IShkWm9nPSWzpWvnPjWeG1O2pSH_3Z=w267-h250-s-no?authuser=0')
+}
+}
+res.innerHTML = `${genero} &lt;br&gt;${idade} anos`
+
+// Signo do Zodíaco
+var nas = Number(`${fmes.value}${fdia.value}`)
+var signo = zodiac(nas)
+res.innerHTML += `&lt;br&gt;Signo Ocidental: ${signo}`
+
+var nasc = Number(`${fano.value}${fmes.value}${fdia.value}`)
+var h = china(nasc)
+res.innerHTML += `&lt;br&gt;Signo Chines: ${h}&lt;br&gt;`
+
+res.append(img)
+
+function zodiac(nas) {
+if (nas &gt;= 121 && nas &lt;= 219) {
+var s = 'Aquário' 
+}
+if (nas &gt;= 219 && nas &lt;= 320) {
+var s = 'Peixes' 
+}
+if (nas &gt;= 321 && nas &lt;= 420) {
+var s = 'Áries'
+}
+if (nas &gt;= 421 && nas &lt;= 520) {
+var s = 'Touro' 
+}
+if (nas &gt;= 521 && nas &lt;= 620) {
+var s = 'Gêmeos' 
+}
+if (nas &gt;= 621 && nas &lt;= 722) {
+var s = 'Câncer' 
+}
+if (nas &gt;= 723 && nas &lt;= 822) {
+var s = 'Leão' 
+}
+if (nas &gt;= 823 && nas &lt;= 922) {
+var s = 'Virgem' 
+}
+if (nas &gt;= 923 && nas &lt;= 1022) {
+var s = 'Libra' 
+}
+if (nas &gt;= 1023 && nas &lt;= 1121) {
+var s = 'Escorpião' 
+}
+if (nas &gt;= 1122 && nas &lt;= 1221) {
+var s = 'Sagitário' 
+}
+if (nas &gt;= 1222 && nas &lt;= 120) {
+var s = 'Capricórnio' 
+}
+return s
+} 
+
+// Horoscopo Chines:
+// 'Rato'
+function china(nasc) {
+if (nasc &gt;= 19000131 && nasc &lt;= 19010218 ) {
+var h = 'Rato' 
+}
+if (nasc &gt;= 19120218 && nasc &lt;= 19130205 ) {
+var h = 'Rato'
+}
+if (nasc &gt;= 19240205 && nasc &lt;= 19250124 ) {
+var h = 'Rato'
+}
+if (nasc &gt;= 19360124 && nasc &lt;= 19370210 ) {
+var h = 'Rato'
+}
+if (nasc &gt;= 19480210 && nasc &lt;= 19490128 ) {
+var h = 'Rato'
+}
+if (nasc &gt;= 19600128 && nasc &lt;= 19610214 ) {
+var h = 'Rato'
+}
+if (nasc &gt;= 19720215 && nasc &lt;= 19730202 ) {
+var h = 'Rato'
+}
+if (nasc &gt;= 19840202 && nasc &lt;= 19850219 ) {
+var h = 'Rato'
+}
+if (nasc &gt;= 19960219 && nasc &lt;= 19970206 ) {
+var h = 'Rato'
+}
+if (nasc &gt;= 20080207 && nasc &lt;= 20090125 ) {
+var h = 'Rato'
+}
+if (nasc &gt;= 20200125 && nasc &lt;= 20210211 ) {
+var h = 'Rato'
+}
+// 'Búfalo'
+if (nasc &gt;= 19010219 && nasc &lt;= 19020207 ) {
+var h = 'Búfalo'
+}
+if (nasc &gt;= 19130206 && nasc &lt;= 19140125 ) {
+var h = 'Búfalo'
+}
+if (nasc &gt;= 19250125 && nasc &lt;= 19260212 ) {
+var h = 'Búfalo'
+}
+if (nasc &gt;= 19370211 && nasc &lt;= 19380130 ) {
+var h = 'Búfalo'
+}
+if (nasc &gt;= 19490129 && nasc &lt;= 19500216 ) {
+var h = 'Búfalo'
+}
+if (nasc &gt;= 19610215 && nasc &lt;= 19620204 ) {
+var h = 'Búfalo'
+}
+if (nasc &gt;= 19730203 && nasc &lt;= 19740122 ) {
+var h = 'Búfalo'
+}
+if (nasc &gt;= 19850220 && nasc &lt;= 19860208 ) {
+var h = 'Búfalo'
+}
+if (nasc &gt;= 19970207 && nasc &lt;= 19980127 ) {
+var h = 'Búfalo'
+}
+if (nasc &gt;= 20090126 && nasc &lt;= 20100213 ) {
+var h = 'Búfalo'
+}
+if (nasc &gt;= 20210212 && nasc &lt;= 20220131 ) {
+var h = 'Búfalo'
+}
+// 'Tigre'
+if (nasc &gt;= 19020208 && nasc &lt;= 19030228 ) {
+var h = 'Tigre'
+}
+if (nasc &gt;= 19140126 && nasc &lt;= 19150213 ) {
+var h = 'Tigre'
+}
+if (nasc &gt;= 19260213 && nasc &lt;= 19270201 ) {
+var h = 'Tigre'
+}
+if (nasc &gt;= 19380131 && nasc &lt;= 19390218 ) {
+var h = 'Tigre'
+}
+if (nasc &gt;= 19500217 && nasc &lt;= 19510205 ) {
+var h = 'Tigre'
+}
+if (nasc &gt;= 19620205 && nasc &lt;= 19630124 ) {
+var h = 'Tigre'
+}
+if (nasc &gt;= 19740123 && nasc &lt;= 19750210 ) {
+var h = 'Tigre'
+}
+if (nasc &gt;= 19860209 && nasc &lt;= 19870128 ) {
+var h = 'Tigre'
+}
+if (nasc &gt;= 19980128 && nasc &lt;= 19990215 ) {
+var h = 'Tigre'
+}
+if (nasc &gt;= 20100214 && nasc &lt;= 20110202 ) {
+var h = 'Tigre'
+}
+if (nasc &gt;= 20220201 && nasc &lt;= 20230121 ) {
+var h = 'Tigre'
+}
+
+// 'Coelho' 
+if (nasc &gt;= 19030129 && nasc &lt;= 19040215 ) {
+var h = 'Coelho'
+}
+if (nasc &gt;= 19150214 && nasc &lt;= 19160202 ) {
+var h = 'Coelho'
+}
+if (nasc &gt;= 19270202 && nasc &lt;= 19280122 ) {
+var h = 'Coelho'
+}
+if (nasc &gt;= 19390219 && nasc &lt;= 19400207 ) {
+var h = 'Coelho'
+}
+if (nasc &gt;= 19510206 && nasc &lt;= 19520126 ) {
+var h = 'Coelho'
+}
+if (nasc &gt;= 19630125 && nasc &lt;= 19640212 ) {
+var h = 'Coelho'
+}
+if (nasc &gt;= 19750211 && nasc &lt;= 19760130 ) {
+var h = 'Coelho'
+}
+if (nasc &gt;= 19870129 && nasc &lt;= 19880216 ) {
+var h = 'Coelho'
+}
+if (nasc &gt;= 19990216 && nasc &lt;= 20000204 ) {
+var h = 'Coelho'
+}
+if (nasc &gt;= 20110203 && nasc &lt;= 20120122 ) {
+var h = 'Coelho'
+}
+if (nasc &gt;= 20230122 && nasc &lt;= 20240209 ) {
+var h = 'Coelho'
+}
+
+// 'Dragão' 
+if (nasc &gt;= 19040216 && nasc &lt;= 19050203 ) {
+var h = 'Dragão'
+}
+if (nasc &gt;= 19160203 && nasc &lt;= 19170122 ) {
+var h = 'Dragão'
+}
+if (nasc &gt;= 19280123 && nasc &lt;= 19290209 ) {
+var h = 'Dragão'
+}
+if (nasc &gt;= 19400208 && nasc &lt;= 19410126 ) {
+var h = 'Dragão'
+}
+if (nasc &gt;= 19520127 && nasc &lt;= 19530213 ) {
+var h = 'Dragão'
+}
+if (nasc &gt;= 19640213 && nasc &lt;= 19650201 ) {
+var h = 'Dragão'
+}
+if (nasc &gt;= 19760131 && nasc &lt;= 19770217 ) {
+var h = 'Dragão'
+}
+if (nasc &gt;= 19880217 && nasc &lt;= 19890205 ) {
+var h = 'Dragão'
+}
+if (nasc &gt;= 20000205 && nasc &lt;= 20010124 ) {
+var h = 'Dragão'
+}
+if (nasc &gt;= 20120123 && nasc &lt;= 20130209 ) {
+var h = 'Dragão'
+}
+if (nasc &gt;= 20240210 && nasc &lt;= 20250128 ) {
+var h = 'Dragão'
+}
+
+// 'Serpente'
+if (nasc &gt;= 19050204 && nasc &lt;= 19060124 ) {
+var h = 'Serpente'
+}
+if (nasc &gt;= 19170123 && nasc &lt;= 19180210 ) {
+var h = 'Serpente'
+}
+if (nasc &gt;= 19290210 && nasc &lt;= 19300129 ) {
+var h = 'Serpente'
+}
+if (nasc &gt;= 19410127 && nasc &lt;= 19420214 ) {
+var h = 'Serpente'
+}
+if (nasc &gt;= 19530214 && nasc &lt;= 19540202 ) {
+var h = 'Serpente'
+}
+if (nasc &gt;= 19650202 && nasc &lt;= 19660120 ) {
+var h = 'Serpente'
+}
+if (nasc &gt;= 19770218 && nasc &lt;= 19780206 ) {
+var h = 'Serpente'
+}
+if (nasc &gt;= 19890206 && nasc &lt;= 19900126 ) {
+var h = 'Serpente'
+}
+if (nasc &gt;= 20010125 && nasc &lt;= 20020211 ) {
+var h = 'Serpente'
+}
+if (nasc &gt;= 20130210 && nasc &lt;= 20140130 ) {
+var h = 'Serpente'
+}
+
+// 'Cavalo'
+if (nasc &gt;= 19060125 && nasc &lt;= 19070212 ) {
+var h = 'Cavalo'
+}
+if (nasc &gt;= 19180211 && nasc &lt;= 19190131 ) {
+var h = 'Cavalo'
+}
+if (nasc &gt;= 19300130 && nasc &lt;= 19310216 ) {
+var h = 'Cavalo'
+}
+if (nasc &gt;= 19420215 && nasc &lt;= 19430204 ) {
+var h = 'Cavalo'
+}
+if (nasc &gt;= 19540203 && nasc &lt;= 19550123 ) {
+var h = 'Cavalo'
+}
+if (nasc &gt;= 19660121 && nasc &lt;= 19670208 ) {
+var h = 'Cavalo'
+}
+if (nasc &gt;= 19780207 && nasc &lt;= 19790127 ) {
+var h = 'Cavalo'
+}
+if (nasc &gt;= 19900127 && nasc &lt;= 19910214 ) {
+var h = 'Cavalo'
+}
+if (nasc &gt;= 20020212 && nasc &lt;= 20030131 ) {
+var h = 'Cavalo'
+}
+if (nasc &gt;= 20140131 && nasc &lt;= 20150218 ) {
+var h = 'Cavalo'
+}
+
+// 'Cabra' 
+if (nasc &gt;= 19070213 && nasc &lt;= 19080201 ) {
+var h = 'Cabra'
+}
+if (nasc &gt;= 19190201 && nasc &lt;= 19200219 ) {
+var h = 'Cabra'
+}
+if (nasc &gt;= 19310217 && nasc &lt;= 19320205 ) {
+var h = 'Cabra'
+}
+if (nasc &gt;= 19430205 && nasc &lt;= 19440124 ) {
+var h = 'Cabra'
+}
+if (nasc &gt;= 19550124 && nasc &lt;= 19560211 ) {
+var h = 'Cabra'
+}
+if (nasc &gt;= 19670209 && nasc &lt;= 19680129 ) {
+var h = 'Cabra'
+}
+if (nasc &gt;= 19790128 && nasc &lt;= 19800215 ) {
+var h = 'Cabra'
+}
+if (nasc &gt;= 19910215 && nasc &lt;= 19920203 ) {
+var h = 'Cabra'
+}
+if (nasc &gt;= 20030201 && nasc &lt;= 20040121 ) {
+var h = 'Cabra'
+}
+if (nasc &gt;= 20150219 && nasc &lt;= 20160207 ) {
+var h = 'Cabra'
+}
+
+// 'Macaco' 
+if (nasc &gt;= 19080202 && nasc &lt;= 19090121 ) {
+var h = 'Macaco'
+}
+if (nasc &gt;= 19200220 && nasc &lt;= 19210107 ) {
+var h = 'Macaco'
+}
+if (nasc &gt;= 19320206 && nasc &lt;= 19330125 ) {
+var h = 'Macaco'
+}
+if (nasc &gt;= 19440125 && nasc &lt;= 19450212 ) {
+var h = 'Macaco'
+}
+if (nasc &gt;= 19560212 && nasc &lt;= 19570130 ) {
+var h = 'Macaco'
+}
+if (nasc &gt;= 19680130 && nasc &lt;= 19690216 ) {
+var h = 'Macaco'
+}
+if (nasc &gt;= 19800216 && nasc &lt;= 19810204 ) {
+var h = 'Macaco'
+}
+if (nasc &gt;= 19920204 && nasc &lt;= 19930122 ) {
+var h = 'Macaco'
+}
+if (nasc &gt;= 20040122 && nasc &lt;= 20050208 ) {
+var h = 'Macaco'
+}
+if (nasc &gt;= 20160208 && nasc &lt;= 20170127 ) {
+var h = 'Macaco'
+}
+
+// 'Cachorro'
+if (nasc &gt;= 19100210 && nasc &lt;= 19110129 ) {
+var h = 'Cachorro'
+}
+if (nasc &gt;= 19220128 && nasc &lt;= 19230215 ) {
+var h = 'Cachorro'
+}
+if (nasc &gt;= 19340215 && nasc &lt;= 19350203 ) {
+var h = 'Cachorro'
+}
+if (nasc &gt;= 19460202 && nasc &lt;= 19470121 ) {
+var h = 'Cachorro'
+}
+if (nasc &gt;= 19580218 && nasc &lt;= 19590207 ) {
+var h = 'Cachorro'
+}
+if (nasc &gt;= 19700206 && nasc &lt;= 19710126 ) {
+var h = 'Cachorro'
+}
+if (nasc &gt;= 19820125 && nasc &lt;= 19830212 ) {
+var h = 'Cachorro'
+}
+if (nasc &gt;= 19940210 && nasc &lt;= 19950130 ) {
+var h = 'Cachorro'
+}
+if (nasc &gt;= 20060129 && nasc &lt;= 20070217 ) {
+var h = 'Cachorro'
+}
+if (nasc &gt;= 20180219 && nasc &lt;= 20190204 ) {
+var h = 'Cachorro'
+}
+
+// 'Galo' 
+if (nasc &gt;= 19090122 && nasc &lt;= 19100209 ) {
+var h = 'Galo'
+}
+if (nasc &gt;= 19210208 && nasc &lt;= 19220127 ) {
+var h = 'Galo'
+}
+if (nasc &gt;= 19330126 && nasc &lt;= 19340214 ) {
+var h = 'Galo'
+}
+if (nasc &gt;= 19450213 && nasc &lt;= 19460201 ) {
+var h = 'Galo'
+}
+if (nasc &gt;= 19570131 && nasc &lt;= 19580217 ) {
+var h = 'Galo'
+}
+if (nasc &gt;= 19690217 && nasc &lt;= 19700205 ) {
+var h = 'Galo'
+}
+if (nasc &gt;= 19810205 && nasc &lt;= 19820124 ) {
+var h = 'Galo'
+}
+if (nasc &gt;= 19930123 && nasc &lt;= 19940209 ) {
+var h = 'Galo'
+}
+if (nasc &gt;= 20050209 && nasc &lt;= 20060128 ) {
+var h = 'Galo'
+}
+if (nasc &gt;= 20170128 && nasc &lt;= 20180218 ) {
+var h = 'Galo'
+}
+
+// 'Javali'
+if (nasc &gt;= 19110130 && nasc &lt;= 19120217 ) {
+var h = 'Javali'
+}
+if (nasc &gt;= 19230216 && nasc &lt;= 19240204 ) {
+var h = 'Javali'
+}
+if (nasc &gt;= 19350204 && nasc &lt;= 19360123 ) {
+var h = 'Javali'
+}
+if (nasc &gt;= 19470122 && nasc &lt;= 19480209 ) {
+var h = 'Javali'
+}
+if (nasc &gt;= 19590208 && nasc &lt;= 19600127 ) {
+var h = 'Javali'
+}
+if (nasc &gt;= 19710127 && nasc &lt;= 19720214 ) {
+var h = 'Javali'
+}
+if (nasc &gt;= 19830213 && nasc &lt;= 19840201 ) {
+var h = 'Javali'
+}
+if (nasc &gt;= 19950131 && nasc &lt;= 19960218 ) {
+var h = 'Javali'
+}
+if (nasc &gt;= 20070218 && nasc &lt;= 20080206 ) {
+var h = 'Javali'
+}
+if (nasc &gt;= 20190205 && nasc &lt;= 20200124 ) {
+var h = 'Javali'
+}
+return h 
+}
+res.innerHTML += `&lt;br&gt;`
+var hjz = Number(`${mes}${dia}`)
+res.innerHTML += `&lt;br&gt;`
+var hojez = zodiac(hjz)
+
+var hjc = Number(`${ano}0${mes}${dia}`)
+var hojec = china(hjc)
+res.innerHTML += `Hoje estamos em: &lt;br&gt; ocidental= ${hojez} e chines= ${hojec}`
+
+}
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+            -------------------------------------------------------------
+        </pre></code>
+    </div>
     <footer>
         <p>Links:</p>
         <a href="https://youtu.be/f5es-PpaUI8" target="_blank">
