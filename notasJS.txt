@@ -21,7 +21,8 @@
 30- 
 29- 
 28- 
-27- 
+<a href="https://youtu.be/mfHAQ-4Rspw">
+    27- JavaScript Exercises (Part 6) - JavaScript Course</a>
 <a href="https://youtu.be/oMNbc_LFz8w">
     26- Exercícios JavaScript (Parte 5) - Curso JavaScript</a>
 <a href="https://youtu.be/6tyHypeY4-8">
