@@ -1,0 +1,127 @@
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;ex017&lt;/title&gt;
+    &lt;style&gt;
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url(https://p1.pxfuel.com/preview/764/521/155/matrix-table-colors-streaky-school.jpg);
+            background-color: gray;
+            background-size: contain;
+            color: red;
+        }
+        body {
+            background-color: rgba(211, 211, 211, 0.859);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        option {
+            font-family: monospace;
+            font-size: .9em;
+        }
+        pre {
+            background-color: lightgray;
+            padding: 10px;
+            min-width: 1000px;
+            color: darkblue;
+        }
+        input {
+            border-radius: 5px;
+            margin-top: 3px;
+            background-color: rgba(240, 255, 255, 0.94);
+            border: 1px solid blue;
+            color: rgb(46, 9, 80);
+        }
+        #txtn {
+            text-align: center;
+            color: green;
+            height: 30px;
+            width: 150px;
+        }
+        h1 {
+            color: forestgreen;
+        }
+        #btn {
+            margin: 10px;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.781);
+            height: 30px;
+            color: blue;
+        }
+        .select {
+            background-color: rgba(246, 206, 111, 0.823);
+            border-radius: 5px;
+            border: 1px solid red;
+            padding: 10px;
+            color: blue;
+            margin-top: 10px;
+            font-weight: bold;
+        } 
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;&lt;a href="../index.html" style="border: 1px solid rgb(45, 24, 154); padding: 2px; border-radius: 5px; color: rgb(32, 22, 164);"&gt;&gt; IndexJS &lt;&lt;/a&gt;&lt;/p&gt;
+    &lt;head&gt;
+        &lt;h1&gt;Tabuada&lt;/h1&gt;
+    &lt;/head&gt;
+    &lt;section&gt;
+        &lt;div&gt;
+            &lt;input type="number" name="num" id="txtn" placeholder="Digite um numero! "&gt;
+            &lt;input type="button" id="btn" value="Enviar" onclick="tabuada()"&gt;
+        &lt;/div&gt;
+        &lt;div  class="select"&gt;
+            &lt;div name="tabuada" id="seltab" size="10"&gt;
+                &lt;!--&lt;option value="v1"&gt;Valor1&lt;/option&gt;
+                &lt;option value="v2"&gt;Valor2&lt;/option&gt;--&gt;
+                &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div id="res"&gt; &lt;br&gt; Resultados de tabuada em matriz: &lt;br&gt; 
+            &lt;div class="select" name="resultado" id="tabu" size="9"&gt;&lt;/div&gt; 
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;hr&gt;
+    &lt;footer&gt;
+        &lt;strong&gt;Links: &lt;br&gt;&lt;/strong&gt;
+        &lt;a href="https://youtu.be/mfHAQ-4Rspw" target="_blank"&gt;
+            27- JavaScript Exercises (Part 6) - JavaScript Course&lt;/a&gt;&lt;br&gt;
+        &lt;code&gt;&lt;pre&gt;-
+        &lt;/pre&gt;&lt;/code&gt;
+        &lt;p&gt;&lt;a href="../index.html" style="border: 1px solid rgb(45, 24, 154); padding: 2px; border-radius: 5px; color: rgb(32, 22, 164);"&gt;&gt; IndexJS &lt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;script&gt;
+    let num = document.getElementById('txtn')
+    function tabuada() {
+        let tab = document.getElementById('seltab')
+        if (num.value.length == 0) {
+            //alert('Digite um numero! ')
+        } else {
+            let n = Number(num.value)
+            let c = 1
+            tab.innerHTML = ''
+            while (c &lt;= 10) {
+                let item = document.createElement('p')
+                item.text = `${n} x ${c} = ${n*c}&lt;br&gt;`
+                item.value = `tab${c}`
+                tab.innerHTML += item.text
+                c++
+            }
+        }
+        num.value = ''
+    }
+    let p = document.createElement('p')
+    for(let i = 1; i &lt;= 9; i++) {
+        p.text = ''
+        for (let j = 1; j &lt;= 9; j++) {
+            let s = i*j
+            let js = ("00" + s).slice(-2)
+            
+            p.text += ` ${js} -`
+        }
+        //item.id = `tab${i}`
+        //tabu.append(item)
+        tabu.innerHTML += p.text + '&lt;br&gt;'
+    }
+&lt;/script&gt;
+&lt;/html&gt;
