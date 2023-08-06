@@ -56,7 +56,7 @@
 <body>
     <p><a href="../index.html" style="border: 1px solid rgb(45, 24, 154); padding: 2px; border-radius: 5px; color: rgb(32, 22, 164);">&gt; IndexJS &lt;</a></p>
     <head>
-        <h1>Tabuada</h1>
+        <h1>Tabuada 2</h1>
     </head>
     <section>
         <div>
@@ -192,10 +192,10 @@
             let c = 1
             tab.innerHTML = ''
             while (c <= 10) {
-                let item = document.createElement('option')
-                item.text = `${n} x ${c} = ${n*c}`
+                let item = document.createElement('p')
+                item.text = `${n} x ${c} = ${n*c}<br>`
                 item.value = `tab${c}`
-                tab.innerHTML += item
+                tab.innerHTML += item.text
                 c++
             }
         }
