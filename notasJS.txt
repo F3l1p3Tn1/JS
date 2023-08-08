@@ -20,7 +20,9 @@
 
 30- 
 29- 
-28- 
+<a href="https://youtu.be/5m4UhZd-Les">
+    28- Módulo F - Avançando os estudos em JavaScript</a>
+    
 <a href="https://youtu.be/mfHAQ-4Rspw">
     27- JavaScript Exercises (Part 6) - JavaScript Course</a>
 <a href="https://youtu.be/oMNbc_LFz8w">

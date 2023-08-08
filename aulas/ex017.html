@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ex017</title>
     <style>
@@ -314,11 +315,8 @@
 </body>
 <script>
     let num = document.getElementById('txtn')
-    
     function tabuada() {
-        
         let tab = document.getElementById('seltab')
-
         if (num.value.length == 0) {
             //alert('Digite um numero! ')
         } else {
@@ -335,7 +333,6 @@
         }
         num.value = ''
     }
-    
     let p = document.createElement('p')
     for(let i = 1; i <= 9; i++) {
         p.text = ''
