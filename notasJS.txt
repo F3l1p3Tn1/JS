@@ -17,12 +17,17 @@
     Curso em Video - Playlists</a><br>
 <a href="https://www.youtube.com/watch?v=1-w1RfGIov4&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&pp=iAQB" target="_blank">
     Curso de JavaScript - Playlist</a><br> 
-
-30- 
-29- 
+ 
+33- 
+32- 
+31- 
+<a href="https://youtu.be/mc3TKp2XzhI">
+    30- Funções - Curso JavaScript #16</a>
+<a href="https://youtu.be/XdkW62tkAgU">
+    29- Variáveis Compostas - Curso JavaScript #15</a>
 <a href="https://youtu.be/5m4UhZd-Les">
     28- Módulo F - Avançando os estudos em JavaScript</a>
-    
+
 <a href="https://youtu.be/mfHAQ-4Rspw">
     27- JavaScript Exercises (Part 6) - JavaScript Course</a>
 <a href="https://youtu.be/oMNbc_LFz8w">
